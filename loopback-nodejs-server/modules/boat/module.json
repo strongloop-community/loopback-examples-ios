@@ -1,0 +1,4 @@
+{
+  "editor": "/tools/model-edit/editor.html",
+  "source": {"properties":{"name":{"type":"string"},"designer":{"type":"string"},"draft":{"type":"string"},"imageurl":{"type":"string"}},"name":"boat","data-source":"db","applications":"app","plural":"boats","propertyNames":["name","designer","draft","imageurl"]}
+}

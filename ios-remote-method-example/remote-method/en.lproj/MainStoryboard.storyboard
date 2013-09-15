@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSP-8B-eaB">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="FD0-Yi-e5A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Custom Method 1" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionMethod1:" destination="2" eventType="touchUpInside" id="PMi-mL-wNN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Remote Method" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-GT-Xis">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="247" id="AGA-qL-2Lj"/>
+                                    <constraint firstAttribute="height" constant="23" id="yJi-FL-h4z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="❸" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh2-Gz-N24">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="5e1-KL-aGc"/>
+                                    <constraint firstAttribute="height" constant="27" id="RgJ-cZ-QlI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="customRemoteMethod = function( arg1, arg2,fn )" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOu-ja-VdX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="448" id="Bl0-oC-zzq"/>
+                                    <constraint firstAttribute="height" constant="21" id="opE-Lc-cky"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Response ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOj-2c-ugT">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="2VX-b2-djh"/>
+                                    <constraint firstAttribute="height" constant="23" id="oJA-8P-2aZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQY-DB-Hdj">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Custom Method 2" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionMethod2:" destination="2" eventType="touchUpInside" id="UjA-zk-YwK"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_57x57.png" translatesAutoresizingMaskIntoConstraints="NO" id="LfJ-ym-mUE"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="customRemoteMethod2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee8-pV-ec0">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="1yp-LW-Olz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Response ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-Yg-gLa">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="RVy-8S-UA4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MK4-Yg-gLa" secondAttribute="bottom" constant="117" id="04y-OQ-7wc"/>
+                            <constraint firstItem="MK4-Yg-gLa" firstAttribute="top" secondItem="NQY-DB-Hdj" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1vz-pI-2xP"/>
+                            <constraint firstItem="NQY-DB-Hdj" firstAttribute="trailing" secondItem="aSP-8B-eaB" secondAttribute="trailing" type="default" id="4uX-Kf-4Jo"/>
+                            <constraint firstItem="4xu-GT-Xis" firstAttribute="leading" secondItem="aSP-8B-eaB" secondAttribute="leading" type="default" id="AdI-P7-59F"/>
+                            <constraint firstItem="vh2-Gz-N24" firstAttribute="leading" secondItem="MK4-Yg-gLa" secondAttribute="leading" type="default" id="Dmu-rr-fJB"/>
+                            <constraint firstItem="NQY-DB-Hdj" firstAttribute="leading" secondItem="Ee8-pV-ec0" secondAttribute="leading" type="default" id="Fwu-7E-rRN"/>
+                            <constraint firstItem="Ee8-pV-ec0" firstAttribute="leading" secondItem="MOj-2c-ugT" secondAttribute="leading" type="default" id="RBM-XZ-5mI"/>
+                            <constraint firstItem="4xu-GT-Xis" firstAttribute="leading" secondItem="zOu-ja-VdX" secondAttribute="leading" type="default" id="TiV-Gq-HUm"/>
+                            <constraint firstAttribute="bottom" secondItem="LfJ-ym-mUE" secondAttribute="bottom" constant="48" id="UX4-iy-sUy"/>
+                            <constraint firstItem="Ee8-pV-ec0" firstAttribute="top" secondItem="3" secondAttribute="top" constant="229" id="XbE-1A-ZXU"/>
+                            <constraint firstAttribute="trailing" secondItem="LfJ-ym-mUE" secondAttribute="trailing" constant="12" id="aOS-SZ-afZ"/>
+                            <constraint firstItem="Ee8-pV-ec0" firstAttribute="trailing" secondItem="zOu-ja-VdX" secondAttribute="trailing" type="default" id="bmg-3i-n9n"/>
+                            <constraint firstItem="zOu-ja-VdX" firstAttribute="top" secondItem="4xu-GT-Xis" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eMN-ya-Im7"/>
+                            <constraint firstItem="vh2-Gz-N24" firstAttribute="centerY" secondItem="LfJ-ym-mUE" secondAttribute="centerY" type="default" id="ffI-Kd-LyK"/>
+                            <constraint firstItem="MOj-2c-ugT" firstAttribute="leading" secondItem="aSP-8B-eaB" secondAttribute="leading" type="default" id="gZs-Hp-su4"/>
+                            <constraint firstItem="4xu-GT-Xis" firstAttribute="top" secondItem="3" secondAttribute="top" constant="43" id="jzi-TI-A0V"/>
+                            <constraint firstItem="MK4-Yg-gLa" firstAttribute="trailing" secondItem="MOj-2c-ugT" secondAttribute="trailing" type="default" id="lw5-Gf-9nz"/>
+                            <constraint firstItem="MOj-2c-ugT" firstAttribute="top" secondItem="aSP-8B-eaB" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="m5L-RS-COP"/>
+                            <constraint firstItem="4xu-GT-Xis" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="13" id="u0k-MB-IiB"/>
+                            <constraint firstItem="aSP-8B-eaB" firstAttribute="top" secondItem="3" secondAttribute="top" constant="106" id="vLv-fG-vri"/>
+                            <constraint firstItem="vh2-Gz-N24" firstAttribute="leading" secondItem="NQY-DB-Hdj" secondAttribute="leading" type="default" id="zz9-2B-qOx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelMethod2" destination="MK4-Yg-gLa" id="E06-uh-2C5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button.png" width="154" height="44"/>
+        <image name="icon_57x57.png" width="57" height="57"/>
+    </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="actionMethod1:"/>
+                <relationship kind="action" name="actionMethod2:"/>
+                <relationship kind="action" name="actionMethod3:"/>
+                <relationship kind="outlet" name="labelMethod1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="labelMethod2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
