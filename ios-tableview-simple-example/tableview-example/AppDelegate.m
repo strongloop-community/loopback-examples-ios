@@ -10,6 +10,37 @@
 
 @implementation AppDelegate
 
+// The LBRESTAdapter defines the API server location endpoint for LoopBack server Calls
+// file://localhost/loopback-clients/ios/docs/html/interface_l_b_r_e_s_t_adapter.html
+
+static LBRESTAdapter * _adapter = nil;
+
++ (LBRESTAdapter *) adapter
+{
+    if( !_adapter)
+        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000"]];
+    return _adapter;
+}
+
++ (void) initializeServerWithData
+{
+    // Define the load error functional block
+    void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
+        NSLog( @"initializeServerWithData : Error on Save %@", error.description);
+    };
+    
+    // Define the load success block for saveNewSuccessBlock message
+    void (^saveNewSuccessBlock)() = ^() {
+        NSLog( @"initializeServerWithData : Saved some initial data ");
+    };
+    
+    LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:@"products"];
+    //Persist the newly created Model to the LoopBack node server
+    [ [prototype modelWithDictionary:@{ @"name": @"Product A", @"inventory" : @11 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    [ [prototype modelWithDictionary:@{ @"name": @"Product B", @"inventory" : @22 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    [ [prototype modelWithDictionary:@{ @"name": @"Product C", @"inventory" : @33 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

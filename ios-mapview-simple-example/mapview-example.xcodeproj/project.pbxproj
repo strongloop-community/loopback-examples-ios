@@ -102,8 +102,6 @@
 		AE6EF9AC17E5EA0A00CE165C = {
 			isa = PBXGroup;
 			children = (
-				AE6EFA9717E5F29100CE165C /* CoreLocation.framework */,
-				AE6EFA9517E5F28B00CE165C /* MapKit.framework */,
 				AE6EF9BE17E5EA0A00CE165C /* mapview-example */,
 				AE6EF9E217E5EA0A00CE165C /* mapview-exampleTests */,
 				AE6EF9B717E5EA0A00CE165C /* Frameworks */,
@@ -123,6 +121,8 @@
 		AE6EF9B717E5EA0A00CE165C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE6EFA9717E5F29100CE165C /* CoreLocation.framework */,
+				AE6EFA9517E5F28B00CE165C /* MapKit.framework */,
 				AE6EFA8117E5EAD500CE165C /* LoopBack.framework */,
 				AE6EF9B817E5EA0A00CE165C /* UIKit.framework */,
 				AE6EF9BA17E5EA0A00CE165C /* Foundation.framework */,
@@ -135,16 +135,16 @@
 		AE6EF9BE17E5EA0A00CE165C /* mapview-example */ = {
 			isa = PBXGroup;
 			children = (
-				AE6EF9C717E5EA0A00CE165C /* AppDelegate.h */,
-				AE6EF9C817E5EA0A00CE165C /* AppDelegate.m */,
-				AE6EF9D017E5EA0A00CE165C /* MainStoryboard.storyboard */,
-				AE6EF9D317E5EA0A00CE165C /* ViewController.h */,
 				AE6EF9D417E5EA0A00CE165C /* ViewController.m */,
-				AE6EF9BF17E5EA0A00CE165C /* Supporting Files */,
+				AE6EF9C817E5EA0A00CE165C /* AppDelegate.m */,
 				AE6EFA8F17E5EF3700CE165C /* MapAnnotation.h */,
 				AE6EFA9017E5EF3700CE165C /* MapAnnotation.m */,
 				AE6EFA9217E5EF4A00CE165C /* HQAnnotation.h */,
 				AE6EFA9317E5EF4A00CE165C /* HQAnnotation.m */,
+				AE6EF9D017E5EA0A00CE165C /* MainStoryboard.storyboard */,
+				AE6EF9BF17E5EA0A00CE165C /* Supporting Files */,
+				AE6EF9D317E5EA0A00CE165C /* ViewController.h */,
+				AE6EF9C717E5EA0A00CE165C /* AppDelegate.h */,
 			);
 			path = "mapview-example";
 			sourceTree = "<group>";
@@ -485,6 +485,7 @@
 				AE6EF9EF17E5EA0A00CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6EF9F017E5EA0A00CE165C /* Build configuration list for PBXNativeTarget "mapview-exampleTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +494,7 @@
 				AE6EF9F217E5EA0A00CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

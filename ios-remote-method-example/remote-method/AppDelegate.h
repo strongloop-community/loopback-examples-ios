@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <LoopBack/LoopBack.h>
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
++ (LBRESTAdapter *) adapter;
++ (void) initializeServerWithData;
 @end

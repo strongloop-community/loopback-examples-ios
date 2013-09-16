@@ -7,12 +7,11 @@
 //
 
 #import "ViewController.h"
-
+#import "AppDelegate.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *myMapView;
 
-@property (weak, nonatomic) LBRESTAdapter *adapter;
 @property (nonatomic) CLLocation *location;
 
 @property (nonatomic, strong) NSMutableArray *mapAnnotations;
@@ -20,13 +19,6 @@
 @end
 
 @implementation ViewController
-- (LBRESTAdapter *) adapter
-{
-    if( !_adapter)
-        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000"]];
-    return _adapter;
-}
-
 
 - (NSArray *) mapAnnotations
 {
@@ -77,7 +69,7 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [self.adapter prototypeWithName:@"ships"];
+    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:@"ships"];
     
     // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/ships
@@ -135,8 +127,8 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [self.adapter prototypeWithName:@"ships"];
-    [[self.adapter contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
+    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:@"ships"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
     
     // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/ships
@@ -148,6 +140,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [AppDelegate initializeServerWithData];
     
     //Configure the Location Manager - your location
     CLLocationManager *manager = [[CLLocationManager alloc] init];

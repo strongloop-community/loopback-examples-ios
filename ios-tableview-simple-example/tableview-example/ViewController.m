@@ -7,23 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
-@property (weak, nonatomic) LBRESTAdapter *adapter;
 @property (strong, nonatomic) NSArray *tableData;
 @end
 
 @implementation ViewController
-
-// The LBRESTAdapter defines the API server location endpoint for LoopBack server Calls
-// file://localhost/loopback-clients/ios/docs/html/interface_l_b_r_e_s_t_adapter.html
-- (LBRESTAdapter *) adapter
-{
-    if( !_adapter)
-        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000"]];
-    return _adapter;
-}
 
 - (NSArray *) tableData
 {
@@ -51,7 +42,7 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'weapons' model type
-    LBModelPrototype *objectB = [self.adapter prototypeWithName:@"products"];
+    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
     
     // Invoke the allWithSuccess message for the 'weapons' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/products
@@ -68,7 +59,7 @@
     
     ///*
     //Get a local representation of the 'weapons' model type
-    LBModelPrototype *prototype = [self.adapter prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
     
     //create new LBModel of type
     LBModel *model = [prototype modelWithDictionary:@{ @"name": @"New Product", @"inventory" : @99 }];
@@ -119,7 +110,7 @@
     };
     
     //Get a local representation of the 'weapons' model type
-    LBModelPrototype *prototype = [self.adapter prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
@@ -157,7 +148,7 @@
     };
     
     //Get a local representation of the 'weapons' model type
-    LBModelPrototype *prototype = [self.adapter prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:@"products"];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
@@ -169,7 +160,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [AppDelegate initializeServerWithData ];
 }
 
 - (void)didReceiveMemoryWarning

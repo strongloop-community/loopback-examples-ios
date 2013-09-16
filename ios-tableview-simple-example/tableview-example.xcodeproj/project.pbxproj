@@ -129,15 +129,15 @@
 		AE6EFA0517E5EA2400CE165C /* tableview-example */ = {
 			isa = PBXGroup;
 			children = (
+				AE6EFA1B17E5EA2400CE165C /* ViewController.m */,
+				AE6EFA0F17E5EA2400CE165C /* AppDelegate.m */,
+				AE6EFA1717E5EA2400CE165C /* MainStoryboard.storyboard */,
 				AE6EFA8717E5EB8400CE165C /* appiconStrongLoop57.png */,
 				AE6EFA8817E5EB8400CE165C /* button-download-small.png */,
 				AE6EFA8917E5EB8400CE165C /* button.png */,
 				AE6EFA8A17E5EB8400CE165C /* icon_57x57.png */,
 				AE6EFA0E17E5EA2400CE165C /* AppDelegate.h */,
-				AE6EFA0F17E5EA2400CE165C /* AppDelegate.m */,
-				AE6EFA1717E5EA2400CE165C /* MainStoryboard.storyboard */,
 				AE6EFA1A17E5EA2400CE165C /* ViewController.h */,
-				AE6EFA1B17E5EA2400CE165C /* ViewController.m */,
 				AE6EFA0617E5EA2400CE165C /* Supporting Files */,
 			);
 			path = "tableview-example";
@@ -481,6 +481,7 @@
 				AE6EFA3617E5EA2400CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6EFA3717E5EA2400CE165C /* Build configuration list for PBXNativeTarget "tableview-exampleTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +490,7 @@
 				AE6EFA3917E5EA2400CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
