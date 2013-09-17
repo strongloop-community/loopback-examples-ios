@@ -41,10 +41,10 @@
         // [self showGuideMessage:@"Great! you just pulled code from node"];
     };//end selfSuccessBlock
     
-    //Get a local representation of the 'weapons' model type
+    //Get a local representation of the model type
     LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
     
-    // Invoke the allWithSuccess message for the 'weapons' LBModelPrototype
+    // Invoke the allWithSuccess message for the LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/products
     
     [objectB allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
@@ -58,7 +58,7 @@
     // ++++++++++++++++++++++++++++++++++++
     
     ///*
-    //Get a local representation of the 'weapons' model type
+    //Get a local representation of the model type
     LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
     
     //create new LBModel of type
@@ -95,7 +95,7 @@
     // Define your success functional block
     void (^findSuccessBlock)(LBModel *) = ^(LBModel *model) {
         //dynamically add an 'inventory' variable to this model type before saving it to the server
-        model[@"name"] = @"NEW NAME";
+        model[@"name"] = @"UPDATED NAME";
         
         //Define the save error block
         void (^saveErrorBlock)(NSError *) = ^(NSError *error) {
@@ -109,7 +109,7 @@
         [model saveWithSuccess:saveSuccessBlock failure:saveErrorBlock];
     };
     
-    //Get a local representation of the 'weapons' model type
+    //Get a local representation of the model type
     LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
     
     //Get the instance of the model with ID = 2
@@ -147,7 +147,7 @@
         [ model destroyWithSuccess:removeSuccessBlock failure:removeErrorBlock ];
     };
     
-    //Get a local representation of the 'weapons' model type
+    //Get a local representation of the model type
     LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:@"products"];
     
     //Get the instance of the model with ID = 2
