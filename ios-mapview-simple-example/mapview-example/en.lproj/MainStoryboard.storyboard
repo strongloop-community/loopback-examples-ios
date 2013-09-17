@@ -14,6 +14,11 @@
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BI-qO-hzf">
                                 <items>
+                                    <barButtonItem title="Inject" id="0VO-7o-Mmi">
+                                        <connections>
+                                            <action selector="actionInject:" destination="2" id="DZb-bF-7tH"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="get all" id="Ohv-gI-Y9l">
                                         <connections>
                                             <action selector="actionGetAll:" destination="2" id="1pm-HS-7f0"/>
@@ -24,7 +29,7 @@
                                             <action selector="actionGetNearest:" destination="2" id="ZJ8-X1-RTy"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Get 5 nearest" id="zLH-Pc-8Rx">
+                                    <barButtonItem title="nearest 5" id="zLH-Pc-8Rx">
                                         <connections>
                                             <action selector="actionGetNearest5:" destination="2" id="PX4-b8-c6c"/>
                                         </connections>
@@ -66,6 +71,7 @@
                 <relationship kind="action" name="actionGetAll:"/>
                 <relationship kind="action" name="actionGetNearest5:"/>
                 <relationship kind="action" name="actionGetNearest:"/>
+                <relationship kind="action" name="actionInject:"/>
                 <relationship kind="outlet" name="myMapView" candidateClass="MKMapView"/>
             </relationships>
         </class>

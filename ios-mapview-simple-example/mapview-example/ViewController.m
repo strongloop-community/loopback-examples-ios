@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
+#define prototypeName @"ships"
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *myMapView;
 
@@ -19,6 +21,7 @@
 @end
 
 @implementation ViewController
+
 
 - (NSArray *) mapAnnotations
 {
@@ -69,7 +72,7 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:@"ships"];
+    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:prototypeName];
     
     // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/ships
@@ -127,7 +130,7 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:@"ships"];
+    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:prototypeName];
     [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
     
     // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
@@ -140,8 +143,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [AppDelegate initializeServerWithData];
     
     //Configure the Location Manager - your location
     CLLocationManager *manager = [[CLLocationManager alloc] init];
@@ -175,8 +176,8 @@
     MKCoordinateRegion newRegion;
     newRegion.center.latitude = 37.786996; //S8P HQ
     newRegion.center.longitude = -122.419281;
-    newRegion.span.latitudeDelta = 0.123872;
-    newRegion.span.longitudeDelta = 0.120863;
+    newRegion.span.latitudeDelta = 0.423872;
+    newRegion.span.longitudeDelta = 0.420863;
     
     [self.myMapView setRegion:newRegion animated:YES];
 }//end gotoLocation
@@ -275,6 +276,35 @@
 - (IBAction)actionGetNearest5:(id)sender {
     [self getNearestFew];
 }
+- (IBAction)actionInject:(id)sender {
+    
+    LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:prototypeName];
+    
+    void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
+        NSLog( @"initializeServerWithData: Error on Save %@", error.description);
+    };
+    void (^saveNewSuccessBlock)() = ^() {
+        //[self gotoLocation];
+    };
+    
+    //Persist the newly created Model to the LoopBack node server
+    [ [ObjectPrototype modelWithDictionary:@{
+       @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
+       @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
+                 [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
+       @"SHIPTYPE" : @"Cargo",
+       @"FLAG": @"US"
+       }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    
+    [ [ObjectPrototype modelWithDictionary:@{
+       @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
+     @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
+     [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
+       @"SHIPTYPE" : @"Cargo",
+       @"FLAG": @"US"
+       }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    
+}//end actionInject
 
 - (void)didReceiveMemoryWarning
 {

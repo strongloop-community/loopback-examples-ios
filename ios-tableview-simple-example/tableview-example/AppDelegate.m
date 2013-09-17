@@ -22,37 +22,6 @@ static LBRESTAdapter * _adapter = nil;
     return _adapter;
 }
 
-+ (void) initializeServerWithData
-{
-    LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:@"products"];
-    
-    //try and read from the endpoint if it comes back with empty set the push some default data to it.
-    
-    // Define the load error functional block
-    void (^loadErrorBlock)(NSError *) = ^(NSError *error) {
-        NSLog( @"initializeServerWithData : Error %@", error.description);
-    };//end selfFailblock
-    
-    // Define the load success block for the LBModelPrototype allWithSuccess message
-    void (^loadSuccessBlock)(NSArray *) = ^(NSArray *models) {
-        
-        if ( models.count <= 0 )
-        {
-            void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
-                NSLog( @"initializeServerWithData: Error on Save %@", error.description);
-            };
-            void (^saveNewSuccessBlock)() = ^() { };
-            
-            //Persist the newly created Model to the LoopBack node server
-            [ [ObjectPrototype modelWithDictionary:@{ @"name": @"Product A", @"inventory" : @11 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
-            [ [ObjectPrototype modelWithDictionary:@{ @"name": @"Product B", @"inventory" : @22 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
-            [ [ObjectPrototype modelWithDictionary:@{ @"name": @"Product C", @"inventory" : @33 }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
-        }//end if models.cout <= 0
-    };//end selfSuccessBlock
-    
-    [ObjectPrototype allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

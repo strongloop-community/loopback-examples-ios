@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
+#define prototypeName @"products"
+
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSArray *tableData;
@@ -42,7 +44,7 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:prototypeName];
     
     // Invoke the allWithSuccess message for the LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/products
@@ -59,7 +61,7 @@
     
     ///*
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:prototypeName];
     
     //create new LBModel of type
     LBModel *model = [prototype modelWithDictionary:@{ @"name": @"New Product", @"inventory" : @99 }];
@@ -78,7 +80,6 @@
     
     //Persist the newly created Model to the LoopBack node server
     [model saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
-    return;
 };
 
 - ( void ) updateExistingModel
@@ -110,7 +111,7 @@
     };
     
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:prototypeName];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
@@ -148,7 +149,7 @@
     };
     
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:prototypeName];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
@@ -156,11 +157,9 @@
     
 }//end deleteExistingModel
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [AppDelegate initializeServerWithData ];
 }
 
 - (void)didReceiveMemoryWarning
@@ -179,6 +178,22 @@
 }
 - (IBAction)actionDelete:(id)sender {
       [self deleteExistingModel];
+}
+
+- (IBAction)actionInjectData:(id)sender {
+    LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:prototypeName];
+    
+    void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
+        NSLog( @"initializeServerWithData: Error on Save %@", error.description);
+    };
+    void (^saveNewSuccessBlock)() = ^() {
+        [self getModels];
+    };
+    
+    //Persist the newly created Model to the LoopBack node server
+    [ [ObjectPrototype modelWithDictionary:@{ @"name": [[NSString alloc] initWithFormat:@"Product %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] , @"inventory" : [NSNumber numberWithInteger:(arc4random() % 60 + 1)] }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    [ [ObjectPrototype modelWithDictionary:@{ @"name": [[NSString alloc] initWithFormat:@"Product %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] , @"inventory" : [NSNumber numberWithInteger:(arc4random() % 60 + 1)] }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    [ [ObjectPrototype modelWithDictionary:@{ @"name": [[NSString alloc] initWithFormat:@"Product %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] , @"inventory" : [NSNumber numberWithInteger:(arc4random() % 60 + 1)] }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
 }
 
 // UITableView methods

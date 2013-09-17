@@ -12,5 +12,4 @@
 
 @property (strong, nonatomic) UIWindow *window;
 + (LBRESTAdapter *) adapter;
-+ (void) initializeServerWithData;
 @end

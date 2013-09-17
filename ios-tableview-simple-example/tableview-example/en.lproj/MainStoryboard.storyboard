@@ -42,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hm-uG-lrf">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="8tq-I6-WTZ"/>
-                                    <constraint firstAttribute="width" constant="194" id="EdW-ID-LXI"/>
+                                    <constraint firstAttribute="width" constant="194" id="cSZ-Sr-5Gl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Refresh" backgroundImage="button.png">
@@ -89,10 +89,9 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="icon_57x57.png" translatesAutoresizingMaskIntoConstraints="NO" id="oSZ-b3-FLx"/>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="TableView with &quot;CRUD&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2r1-Rz-n1g">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Simple TableView with &quot;CRUD&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2r1-Rz-n1g">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="b3U-El-bPC"/>
-                                    <constraint firstAttribute="width" constant="259" id="naP-ep-Evd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
@@ -107,27 +106,47 @@
                                 <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyP-tg-72L">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="YKp-vl-WG5"/>
+                                    <constraint firstAttribute="width" constant="194" id="sAb-uK-3ze"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Inject Data" backgroundImage="button.png">
+                                    <color key="titleColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionInjectData:" destination="2" eventType="touchUpInside" id="1hq-FN-Ck9"/>
+                                    <action selector="actionRefresh:" destination="2" eventType="touchUpInside" id="NHx-4H-KjQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6N4-gL-EAu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="9" id="2ho-w2-bjz"/>
-                            <constraint firstItem="fMn-Xk-jLV" firstAttribute="top" secondItem="6N4-gL-EAu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="3oc-7t-pgp"/>
+                            <constraint firstAttribute="bottom" secondItem="6N4-gL-EAu" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="0qY-l1-4Ju"/>
                             <constraint firstItem="ses-Mj-1AF" firstAttribute="trailing" secondItem="p9x-OC-pgn" secondAttribute="trailing" type="default" id="43A-ml-gku"/>
+                            <constraint firstItem="ZyP-tg-72L" firstAttribute="top" secondItem="2r1-Rz-n1g" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4hb-g5-axv"/>
                             <constraint firstItem="p9x-OC-pgn" firstAttribute="top" secondItem="ses-Mj-1AF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6EN-Zd-G1o"/>
                             <constraint firstItem="ses-Mj-1AF" firstAttribute="trailing" secondItem="8hm-uG-lrf" secondAttribute="trailing" type="default" id="76q-yQ-9vR"/>
-                            <constraint firstItem="6N4-gL-EAu" firstAttribute="baseline" secondItem="2r1-Rz-n1g" secondAttribute="baseline" type="default" id="8N9-Cm-fDB"/>
+                            <constraint firstItem="2r1-Rz-n1g" firstAttribute="top" secondItem="3" secondAttribute="top" constant="8" id="8Xc-Y1-evX"/>
                             <constraint firstItem="3hs-UR-dgc" firstAttribute="trailing" secondItem="p9x-OC-pgn" secondAttribute="trailing" type="default" id="8ng-X4-WZD"/>
+                            <constraint firstItem="2r1-Rz-n1g" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="23" id="Fwp-kk-Nbc"/>
                             <constraint firstItem="8hm-uG-lrf" firstAttribute="leading" secondItem="fMn-Xk-jLV" secondAttribute="leading" type="default" id="HBP-6g-uM8"/>
-                            <constraint firstItem="2r1-Rz-n1g" firstAttribute="trailing" secondItem="fMn-Xk-jLV" secondAttribute="trailing" type="default" id="LR3-7d-lpX"/>
-                            <constraint firstItem="6N4-gL-EAu" firstAttribute="top" secondItem="3" secondAttribute="top" constant="44" id="MXe-7K-1en"/>
+                            <constraint firstItem="fMn-Xk-jLV" firstAttribute="top" secondItem="ZyP-tg-72L" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Oyf-Vj-uDm"/>
+                            <constraint firstItem="oSZ-b3-FLx" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="P3M-jW-IgN"/>
+                            <constraint firstItem="6N4-gL-EAu" firstAttribute="centerX" secondItem="oSZ-b3-FLx" secondAttribute="centerX" type="default" id="c72-FF-UPI"/>
                             <constraint firstItem="p9x-OC-pgn" firstAttribute="leading" secondItem="ses-Mj-1AF" secondAttribute="leading" type="default" id="d1x-8H-wbj"/>
+                            <constraint firstItem="ZyP-tg-72L" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="enR-Dj-ImL"/>
                             <constraint firstItem="8hm-uG-lrf" firstAttribute="top" secondItem="fMn-Xk-jLV" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="f4N-1N-NeA"/>
+                            <constraint firstItem="2r1-Rz-n1g" firstAttribute="leading" secondItem="fMn-Xk-jLV" secondAttribute="leading" type="default" id="fI1-UF-Il4"/>
                             <constraint firstItem="3hs-UR-dgc" firstAttribute="top" secondItem="p9x-OC-pgn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="iPQ-Xu-d75"/>
                             <constraint firstAttribute="bottom" secondItem="oSZ-b3-FLx" secondAttribute="bottom" constant="105" id="lz0-Ha-5eh"/>
                             <constraint firstItem="8hm-uG-lrf" firstAttribute="leading" secondItem="ses-Mj-1AF" secondAttribute="leading" type="default" id="pDC-pD-AOZ"/>
                             <constraint firstItem="ses-Mj-1AF" firstAttribute="top" secondItem="8hm-uG-lrf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="u7n-FF-Iap"/>
-                            <constraint firstItem="2r1-Rz-n1g" firstAttribute="leading" secondItem="6N4-gL-EAu" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="w0f-Fh-VD4"/>
-                            <constraint firstAttribute="trailing" secondItem="oSZ-b3-FLx" secondAttribute="trailing" constant="9" id="xGN-GK-ukr"/>
                             <constraint firstItem="3hs-UR-dgc" firstAttribute="leading" secondItem="p9x-OC-pgn" secondAttribute="leading" type="default" id="xm5-Cx-wQr"/>
                         </constraints>
                     </view>
@@ -152,6 +171,7 @@
             <relationships>
                 <relationship kind="action" name="actionCreate:"/>
                 <relationship kind="action" name="actionDelete:"/>
+                <relationship kind="action" name="actionInjectData:"/>
                 <relationship kind="action" name="actionRefresh:"/>
                 <relationship kind="action" name="actionUpdate:"/>
                 <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
