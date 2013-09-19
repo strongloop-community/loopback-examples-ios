@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -24,12 +24,12 @@
                                             <action selector="actionGetAll:" destination="2" id="1pm-HS-7f0"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="get nearest" id="Wp2-Ms-LlR">
+                                    <barButtonItem title="nearest HQ" id="Wp2-Ms-LlR">
                                         <connections>
                                             <action selector="actionGetNearest:" destination="2" id="ZJ8-X1-RTy"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="nearest 5" id="zLH-Pc-8Rx">
+                                    <barButtonItem title="nearest 2" id="zLH-Pc-8Rx">
                                         <connections>
                                             <action selector="actionGetNearest5:" destination="2" id="PX4-b8-c6c"/>
                                         </connections>

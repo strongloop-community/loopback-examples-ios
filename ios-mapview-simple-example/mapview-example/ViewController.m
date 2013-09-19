@@ -17,16 +17,52 @@
 @property (nonatomic) CLLocation *location;
 
 @property (nonatomic, strong) NSMutableArray *mapAnnotations;
-    
+
+
+//StrongLoop HQ
+@property (nonatomic, strong) HQAnnotation *hqAnnotation;
+//San Francisco City
+@property (nonatomic, strong) MapAnnotation *sfAnnotation;
+
 @end
 
 @implementation ViewController
 
 
+/*
+ [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/location/nearby" verb:@"GET"] forMethod:@"locations.getNearestFew"];
+ [LocationProto invokeStaticMethod:@"getNearestFew" parameters:@{
+ @"here": @{
+ @"lat": 37.587409,
+ @"lng": -122.338225
+ }
+ } success:staticMethodSuccessBlock failure:staticMethodErrorBlock];
+ */
+
 - (NSArray *) mapAnnotations
 {
     if ( !_mapAnnotations) _mapAnnotations = [[NSMutableArray alloc] init];
     return _mapAnnotations;
+};
+
+- (HQAnnotation *) hqAnnotation
+{
+    if ( !_hqAnnotation) _hqAnnotation = [[HQAnnotation alloc] init];
+    return _hqAnnotation;
+};
+
+- (MapAnnotation *) sfAnnotation
+{
+    if ( !_sfAnnotation)
+    {
+        CLLocationCoordinate2D cityCoord;
+        cityCoord.latitude = 37.786996;
+        cityCoord.longitude = -122.419281;
+        _sfAnnotation = [[MapAnnotation alloc] initWithLocation:cityCoord];
+        _sfAnnotation.title = @"SF";
+        _sfAnnotation.subtitle = @"city";
+    }//end if
+    return _sfAnnotation;
 };
 
 
@@ -46,6 +82,7 @@
         NSLog( @"selfSuccessBlock %d", models.count);
         
         NSLog( @"Success %d", [models count]);
+        [self.mapAnnotations removeAllObjects ];
         
         for (int i = 0; i < models.count; i++) {
             
@@ -64,6 +101,9 @@
             
         }//end for
         
+        [self.mapAnnotations addObject: [self sfAnnotation]];
+        [self.mapAnnotations addObject: [self hqAnnotation]];
+        
         [self.myMapView removeAnnotations:self.myMapView.annotations];  // remove any annotations that exist
         [self.myMapView addAnnotations:self.mapAnnotations]; //add the new Annotation list
         
@@ -81,17 +121,13 @@
 }
 
 
-- ( void ) getNearest
+- ( void ) getNearestHQ
 {
-    
-}
-
-- ( void ) getNearestFew
-{
-    
     // ++++++++++++++++++++++++++++++++++++
-    // http://localhost:3000/ships?filter%5Blimit%5D=2
-    // curl http://localhost:3000/ships/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
+    
+    // Get Nearest Ship
+    // http://localhost:3000/ships?filter%5Blimit%5D=1
+    // curl http://localhost:3000/location/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
     // ++++++++++++++++++++++++++++++++++++
     
     // Define the load error functional block
@@ -105,6 +141,8 @@
         
         NSLog( @"Success %d", [models count]);
         
+        [self.mapAnnotations removeAllObjects ];
+        
         for (int i = 0; i < models.count; i++) {
             
             LBModel *modelInstance = (LBModel*)[models objectAtIndex:i];
@@ -122,6 +160,9 @@
             
         }//end for
         
+        [self.mapAnnotations addObject: [self sfAnnotation]];
+        [self.mapAnnotations addObject: [self hqAnnotation]];
+        
         [self.myMapView removeAnnotations:self.myMapView.annotations];  // remove any annotations that exist
         [self.myMapView addAnnotations:self.mapAnnotations]; //add the new Annotation list
         
@@ -130,13 +171,117 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:prototypeName];
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
+    LBModelPrototype *objectProto = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships" verb:@"GET"] forMethod:@"ships.filter"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships/nearby" verb:@"GET"] forMethod:@"ships.nearby"];
+    
+    // http://localhost:3000/ships/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
+    
+    NSString *latitude = [[NSString alloc] initWithFormat:@"%g°", self.hqAnnotation.coordinate.latitude];
+    NSString *longitude = [[NSString alloc] initWithFormat:@"%g°", self.hqAnnotation.coordinate.longitude];
+    
+    //get Nearest with ships.nearby
+    //[objectProto invokeStaticMethod:@"nearby" parameters:@{ @"here[lat]":latitude, @"here[lng]":longitude} success:loadSuccessBlock failure:loadErrorBlock];
+    //get 1
+    [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[limit]":@1} success:loadSuccessBlock failure:loadErrorBlock];
+    
+}
+
+- ( void ) getNearest2
+{
+    
+    // ++++++++++++++++++++++++++++++++++++
+    
+    // Get 2 Ships
+    // http://localhost:3000/ships?filter%5Blimit%5D=2
+    
+    //
+    // curl http://localhost:3000/location/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
+    // ++++++++++++++++++++++++++++++++++++
+    
+    // Define the load error functional block
+    void (^loadErrorBlock)(NSError *) = ^(NSError *error) {
+        NSLog( @"Error %@", error.description);
+    };//end selfFailblock
+    
+    // Define the load success block for the LBModelPrototype allWithSuccess message
+    void (^loadSuccessBlock)(NSArray *) = ^(NSArray *models) {
+        NSLog( @"selfSuccessBlock %d", models.count);
+        
+        NSLog( @"Success %d", [models count]);
+        
+        [self.mapAnnotations removeAllObjects ];
+        
+        for (int i = 0; i < models.count; i++) {
+            
+            LBModel *modelInstance = (LBModel*)[models objectAtIndex:i];
+            LBModel *geoInstance  = [modelInstance objectForKeyedSubscript:@"geo"];
+            
+            CLLocationCoordinate2D locCord;
+            locCord.latitude = [[geoInstance objectForKeyedSubscript:@"lat"] doubleValue];
+            locCord.longitude = [[geoInstance objectForKeyedSubscript:@"lng"] doubleValue];
+            
+            MapAnnotation *annot = [[MapAnnotation alloc] initWithLocation:locCord];
+            annot.title = [modelInstance objectForKeyedSubscript:@"name"];
+            annot.subtitle = [modelInstance objectForKeyedSubscript:@"SHIPTYPE"];
+            
+            [self.mapAnnotations addObject:annot ];
+            
+        }//end for
+        
+        [self.mapAnnotations addObject: [self sfAnnotation]];
+        [self.mapAnnotations addObject: [self hqAnnotation]];
+        
+        [self.myMapView removeAnnotations:self.myMapView.annotations];  // remove any annotations that exist
+        [self.myMapView addAnnotations:self.mapAnnotations]; //add the new Annotation list
+        
+        [self gotoLocation];
+        
+    };//end selfSuccessBlock
+    
+    //Get a local representation of the 'ships' model type
+    LBModelPrototype *objectProto = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    //[[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships" verb:@"GET"] forMethod:@"ships.filter"];
+    
+    //get 2 
+    [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[limit]":@2} success:loadSuccessBlock failure:loadErrorBlock];
+
+    
+    //[[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/location/nearby" verb:@"GET"] forMethod:@"locations.getNearestFew"];
+
+    /*
+    // Ships with lowest inventory
+    // http://localhost:3000/products?filter[order]=inventory%20ASC&filter[limit]=1': The highest inventory products
+    [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[order]":@"inventory ASC",@"filter[limit]":@1} success:staticMethodSuccessBlock failure:staticMethodErrorBlock];
+    
+    [objectProto invokeStaticMethod:@"getNearestFew" parameters:@{
+     @"here": @{
+     @"lat": 37.587409,
+     @"lng": -122.338225
+     }
+     } success:staticMethodSuccessBlock failure:staticMethodErrorBlock];
+    */
+    
+    
+    
+    
     
     // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/ships
-    [objectB allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
+    //[objectProto allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
     //[objectB all:@"custommethod2" parameters:@{@"arg1":@"yack" , @"arg2":@123} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
+    
+    
+    //'/locations?filter[where][geo][near]=153.536,-28.1&filter[limit]=3': The 3 closest locations to a given
+    
+    // curl http://localhost:3000/locations/findOne?filter%5Bwhere%5D%5Bcity%5D=Scottsdale
+    
+    //LBModelPrototype *LocationProto = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    //[[ [AppDelegate adapter]  contract] addItem:[SLRESTContractItem itemWithPattern:@"findOne" verb:@"GET"] forMethod:@"locations.getNearestFew"];
+    //[LocationProto invokeStaticMethod:@"getNearestFew" parameters:@{} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
+    //[LocationProto invokeStaticMethod:@"getNearestFew" parameters:@{@"filter":@"yack" , @"limit":@2 } success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
     
 }
 
@@ -153,18 +298,9 @@
     // In the event the location services are disabled, start with a default location:
     self.location = [[CLLocation alloc] initWithLatitude:37.587409 longitude:-122.338225];
     
-    // Add SF City
-    CLLocationCoordinate2D cityCoord;
-    cityCoord.latitude = 37.786996;
-    cityCoord.longitude = -122.419281;
-    MapAnnotation *cityAnnotation = [[MapAnnotation alloc] initWithLocation:cityCoord];
-    cityAnnotation.title = @"SF";
-    cityAnnotation.subtitle = @"city";
-    [self.mapAnnotations addObject:cityAnnotation ];
-    
-    // annotation for S8P HQ
-    HQAnnotation *hqAnnotation = [[HQAnnotation alloc] init];
-    [self.mapAnnotations addObject:hqAnnotation];
+    //Add SF City and S8P HQ
+    [self.mapAnnotations addObject: [self sfAnnotation]];
+    [self.mapAnnotations addObject: [self hqAnnotation]];
     
     [self gotoLocation];
 }
@@ -270,12 +406,14 @@
 - (IBAction)actionGetAll:(id)sender {
     [self getAll];
 }
+
 - (IBAction)actionGetNearest:(id)sender {
-    [self getNearest];
+    [self getNearestHQ];
 }
 - (IBAction)actionGetNearest5:(id)sender {
-    [self getNearestFew];
+    [self getNearest2];
 }
+
 - (IBAction)actionInject:(id)sender {
     
     LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:prototypeName];
