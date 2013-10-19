@@ -27,9 +27,7 @@ $slc run loopback-nodejs-server/app.js
 
 ### Samples
 
-![Image](screenshots/tableview.png?raw=true)
-![Image](screenshots/mapview.png?raw=true)
-![Image](screenshots/remote.png?raw=true)
+![Image](screenshots/sample-examples-ios-all.png?raw=true)
 
 #### UITableView with CRUD
 ![](screenshots/tableview.png?raw=true)

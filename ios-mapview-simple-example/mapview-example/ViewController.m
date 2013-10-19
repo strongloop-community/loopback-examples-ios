@@ -29,6 +29,9 @@
 @implementation ViewController
 
 
+// http://localhost:3000/stores?filter[where][geo][near]=4,10
+
+
 /*
  [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/location/nearby" verb:@"GET"] forMethod:@"locations.getNearestFew"];
  [LocationProto invokeStaticMethod:@"getNearestFew" parameters:@{
