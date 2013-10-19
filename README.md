@@ -3,7 +3,7 @@
 
 
 
-## Getting Started
+##Getting Started
 
 1. Install and configure the StrongLoop Suite on your dev environment.  more information on installing LoopBack can be found in the [ StrongLoop Products ](http://strongloop.com/products
 
@@ -25,16 +25,16 @@ $slc run loopback-nodejs-server/app.js
 
 5. Open and Run ( CMD-R ) one of the sample projects 
 
-### Samples
+###Example apps
 
 ![Image](screenshots/sample-examples-ios-all.png?raw=true)
 
-#### UITableView with CRUD
+####UITableView with CRUD
 ![](screenshots/tableview.png?raw=true)
 
-#### MapView with Get All, Get Nearest, Get Nearest 5 
+####MapView with Get All, Get Nearest, Get Nearest 5 
 ![](screenshots/mapview.png?raw=true)
 
-#### Remote Method
+####Remote Method
 ![](screenshots/remote.png?raw=true)
 
