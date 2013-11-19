@@ -1,4 +1,4 @@
 {
   "editor": "/tools/model-edit/editor.html",
-  "source": {"properties":{},"name":"product","data-source":"db","applications":"app"}
+  "source": {"properties":{},"name":"product","public":true,"data-source":"db"}
 }

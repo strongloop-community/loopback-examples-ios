@@ -10,8 +10,9 @@
  * Module dependencies.
  */
 
-var utils = require('../utils')
-  , _limit = require('./limit');
+var utils = require('../utils');
+var getBody = require('raw-body');
+var bytes = require('bytes');
 
 /**
  * JSON:
@@ -24,6 +25,9 @@ var utils = require('../utils')
  *   - `strict`  when `false` anything `JSON.parse()` accepts will be parsed
  *   - `reviver`  used as the second "reviver" argument for JSON.parse
  *   - `limit`  byte limit [1mb]
+ *   - `verify`  synchronous verification function.
+ *      should have signature (req, res, buffer).
+ *      should throw an error on failure.
  *
  * @param {Object} options
  * @return {Function}
@@ -31,10 +35,14 @@ var utils = require('../utils')
  */
 
 exports = module.exports = function(options){
-  var options = options || {}
-    , strict = options.strict !== false;
+  options = options || {};
+  var strict = options.strict !== false;
+  var verify = typeof options.verify === 'function' && options.verify;
 
-  var limit = _limit(options.limit || '1mb');
+  var limit = !options.limit ? bytes('1mb')
+    : typeof options.limit === 'number' ? options.limit
+    : typeof options.limit === 'string' ? bytes(options.limit)
+    : null;
 
   return function json(req, res, next) {
     if (req._body) return next();
@@ -49,29 +57,39 @@ exports = module.exports = function(options){
     req._body = true;
 
     // parse
-    limit(req, res, function(err){
+    getBody(req, {
+      limit: limit,
+      expected: req.headers['content-length']
+    }, function (err, buf) {
       if (err) return next(err);
-      var buf = '';
-      req.setEncoding('utf8');
-      req.on('data', function(chunk){ buf += chunk });
-      req.on('end', function(){
-        var first = buf.trim()[0];
 
-        if (0 == buf.length) {
-          return next(utils.error(400, 'invalid json, empty body'));
-        }
-        
-        if (strict && '{' != first && '[' != first) return next(utils.error(400, 'invalid json'));
+      if (verify) {
         try {
-          req.body = JSON.parse(buf, options.reviver);
-        } catch (err){
-          err.body = buf;
-          err.status = 400;
+          verify(req, res, buf)
+        } catch (err) {
+          if (!err.status) err.status = 403;
           return next(err);
         }
-        next();
-      });
-    });
+      }
+
+      buf = buf.toString('utf8').trim();
+
+      var first = buf[0];
+
+      if (0 == buf.length) {
+        return next(utils.error(400, 'invalid json, empty body'));
+      }
+
+      if (strict && '{' != first && '[' != first) return next(utils.error(400, 'invalid json'));
+      try {
+        req.body = JSON.parse(buf, options.reviver);
+      } catch (err){
+        err.body = buf;
+        err.status = 400;
+        return next(err);
+      }
+      next();
+    })
   };
 };
 

@@ -7,7 +7,7 @@ function after (t, fn) {
 	};
 }
 
-var socket = './test/socket';
+var socket = 5000;
 
 describe('session', function () {
 	this.timeout(5000);

@@ -1,14 +1,14 @@
 
 echo load product data 
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product A", "inventory": 11, "UPC": "127890"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product B", "inventory": 22, "UPC": "127891"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product C", "inventory": 33, "UPC": "127892"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product D", "inventory": 44, "UPC": "123893"}' http://localhost:3000/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product A", "inventory": 11, "price" :66.34, "UPC": "127890"}' http://localhost:3000/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product B", "inventory": 22, "price" :22.34, "UPC": "127891"}' http://localhost:3000/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product C", "inventory": 33, "price" :11.54, "UPC": "127892"}' http://localhost:3000/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product D", "inventory": 44, "price" :9.24, "UPC": "123893"}' http://localhost:3000/products;
 
 echo car data
-curl -X POST -H "Content-Type:application/json" -d '{"name":"Mustang", "milage": 22 }' http://localhost:3000/cars;
-curl -X POST -H "Content-Type:application/json" -d '{"name":"VW", "milage": 33  }' http://localhost:3000/cars;
-curl -X POST -H "Content-Type:application/json" -d '{"name":"FJ", "milage": 44  }' http://localhost:3000/cars;
+curl -X POST -H "Content-Type:application/json" -d '{"name":"Mustang", "milage": 1122 }' http://localhost:3000/cars;
+curl -X POST -H "Content-Type:application/json" -d '{"name":"VW Bug", "milage": 3333  }' http://localhost:3000/cars;
+curl -X POST -H "Content-Type:application/json" -d '{"name":"Toyota FJ", "milage": 47734  }' http://localhost:3000/cars;
 
 echo store data
 curl -X POST -H "Content-Type:application/json" -d '{"name":"Store 1", "geo": { "lat": 4, "lng": 20 } }' http://localhost:3000/stores;

@@ -8,6 +8,11 @@
 // precompiled version
 
 var module_name = "uvmon";
+
+// Need to always build under the same verisons, or remove the old directories
+// and update to new ones when we use a different version on the same minor
+// release number.
+
 var version_map = {
   'v0.10.*': 'v0.10.12'
   }

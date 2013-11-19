@@ -2,8 +2,7 @@
   
   "data-source": "db",
   
-  "applications": ["app"],
   
-  "public": false
+  "public": true
   
 }

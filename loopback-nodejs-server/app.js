@@ -36,5 +36,5 @@ function loadModules() {
   return modules;
 }
 
-console.log('Loading loopback-project...');
+console.log('Loading loopback-nodejs-server...');
 loadModules();

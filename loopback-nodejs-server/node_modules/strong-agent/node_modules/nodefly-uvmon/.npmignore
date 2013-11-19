@@ -1,5 +1,7 @@
 build/
 example/
+.idea/
+node_modules/
 builderror.log
 
 # Compiled Object files

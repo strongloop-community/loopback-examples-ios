@@ -75,6 +75,19 @@ Handle<Value> getData(const Arguments& args) {
 
 
 /*
+ * Stops the check callback.
+ * Only used when loading multiple instances of uvmon (ie testing).
+ */
+Handle<Value> stop(const Arguments& arg) {
+  HandleScope scope;
+
+  uv_check_stop(&check_handle);
+
+  return scope.Close(Undefined());
+}
+
+
+/*
  * Initialization and registration of methods with node.
  */
 void init(Handle<Object> target) {
@@ -85,6 +98,7 @@ void init(Handle<Object> target) {
   uv_check_start(&check_handle, check_cb);
   
   NODE_SET_METHOD(target, "getData", getData);
+  NODE_SET_METHOD(target, "stop", stop);
 }
 
 NODE_MODULE(uvmon, init);
