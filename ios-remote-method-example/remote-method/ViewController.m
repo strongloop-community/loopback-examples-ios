@@ -31,17 +31,20 @@
     void (^staticMethodSuccessBlock)() = ^(id result) {
         NSLog(@"Success on Static Method result: %@", result);
         
-        self.labelMethod1.text = @"Response 1";
+        self.labelMethod1.text = [[NSString alloc] initWithFormat:@"fed %@ - state %@",
+                                  [[result objectForKey:@"currentTax"] objectForKey:@"federal"],
+                                  [[result objectForKey:@"currentTax"] objectForKey:@"state"]
+                                  ];
         
     };//end staticMethodSuccessBlock
     
     //Get a local representation of the 'cars' model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"cars"];
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/cars/custommethod1" verb:@"GET"] forMethod:@"cars.custommethod1"];
+    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/products/taxInfo" verb:@"GET"] forMethod:@"products.taxInfo"];
     
     // Invoke the invokeStaticMethod message for the 'cars' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/cars/custommethod1
-    [objectB invokeStaticMethod:@"custommethod1" parameters:@{} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
+    [objectB invokeStaticMethod:@"taxInfo" parameters:@{} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
 }
 
 - (IBAction)actionMethod2:(id)sender {
@@ -59,18 +62,19 @@
     void (^staticMethodSuccessBlock)() = ^(id result) {
         NSLog(@"Success on Static Method result: %@", result);
         
-        self.labelMethod2.text = @"Response 2";
+        self.labelMethod2.text = [[NSString alloc] initWithFormat:@" %@ ",
+                                  [[result objectForKey:@"totalInventoryValuation"] objectForKey:@"inventoryValuation"] ];
         
     };//end staticMethodSuccessBlock
     
     //Get a local representation of the 'cars' model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"cars"];
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/cars/custommethod2" verb:@"GET"] forMethod:@"cars.custommethod2"];
+    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/products/totalValuation" verb:@"GET"] forMethod:@"products.totalValuation"];
     
     // Invoke the invokeStaticMethod message for the 'cars' LBModelPrototype
     // Equivalent http JSON endpoint request : http://localhost:3000/cars/custommethod2?arg1=yack&arg2=123
-    [objectB invokeStaticMethod:@"custommethod2" parameters:@{@"arg1":@"yack" , @"arg2":@123} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
-    
+    //[objectB invokeStaticMethod:@"custommethod2" parameters:@{@"arg1":@"yack" , @"arg2":@123} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
+    [objectB invokeStaticMethod:@"totalValuation" parameters:@{} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
 }
 - (IBAction)actionMethod3:(id)sender {
     
