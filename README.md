@@ -38,3 +38,8 @@ $slc run loopback-nodejs-server/app.js
 ####Remote Method
 ![](screenshots/remote.png?raw=true)
 
+
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/d2ee0a3325036377aca0f548c0d27602 "githalytics.com")](http://githalytics.com/strongloop-community/loopback-examples-ios)
+
