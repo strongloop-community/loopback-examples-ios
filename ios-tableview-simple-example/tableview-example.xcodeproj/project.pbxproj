@@ -28,6 +28,10 @@
 		AE6EFA8C17E5EB8400CE165C /* button-download-small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8817E5EB8400CE165C /* button-download-small.png */; };
 		AE6EFA8D17E5EB8400CE165C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8917E5EB8400CE165C /* button.png */; };
 		AE6EFA8E17E5EB8400CE165C /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8A17E5EB8400CE165C /* icon_57x57.png */; };
+		AE8307A0183D74CD00B3BA76 /* appiconStrongLoop57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83079C183D74CD00B3BA76 /* appiconStrongLoop57.png */; };
+		AE8307A1183D74CD00B3BA76 /* button-download-small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83079D183D74CD00B3BA76 /* button-download-small.png */; };
+		AE8307A2183D74CD00B3BA76 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83079E183D74CD00B3BA76 /* button.png */; };
+		AE8307A3183D74CD00B3BA76 /* icon_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE83079F183D74CD00B3BA76 /* icon_57x57.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +72,10 @@
 		AE6EFA8817E5EB8400CE165C /* button-download-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-download-small.png"; sourceTree = "<group>"; };
 		AE6EFA8917E5EB8400CE165C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		AE6EFA8A17E5EB8400CE165C /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
+		AE83079C183D74CD00B3BA76 /* appiconStrongLoop57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appiconStrongLoop57.png; sourceTree = "<group>"; };
+		AE83079D183D74CD00B3BA76 /* button-download-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-download-small.png"; sourceTree = "<group>"; };
+		AE83079E183D74CD00B3BA76 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		AE83079F183D74CD00B3BA76 /* icon_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57x57.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,13 +139,17 @@
 			children = (
 				AE6EFA1B17E5EA2400CE165C /* ViewController.m */,
 				AE6EFA0F17E5EA2400CE165C /* AppDelegate.m */,
+				AE6EFA0E17E5EA2400CE165C /* AppDelegate.h */,
+				AE6EFA1A17E5EA2400CE165C /* ViewController.h */,
 				AE6EFA1717E5EA2400CE165C /* MainStoryboard.storyboard */,
 				AE6EFA8717E5EB8400CE165C /* appiconStrongLoop57.png */,
 				AE6EFA8817E5EB8400CE165C /* button-download-small.png */,
 				AE6EFA8917E5EB8400CE165C /* button.png */,
 				AE6EFA8A17E5EB8400CE165C /* icon_57x57.png */,
-				AE6EFA0E17E5EA2400CE165C /* AppDelegate.h */,
-				AE6EFA1A17E5EA2400CE165C /* ViewController.h */,
+				AE83079C183D74CD00B3BA76 /* appiconStrongLoop57.png */,
+				AE83079D183D74CD00B3BA76 /* button-download-small.png */,
+				AE83079E183D74CD00B3BA76 /* button.png */,
+				AE83079F183D74CD00B3BA76 /* icon_57x57.png */,
 				AE6EFA0617E5EA2400CE165C /* Supporting Files */,
 			);
 			path = "tableview-example";
@@ -248,12 +260,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6EFA0A17E5EA2400CE165C /* InfoPlist.strings in Resources */,
+				AE8307A2183D74CD00B3BA76 /* button.png in Resources */,
+				AE8307A3183D74CD00B3BA76 /* icon_57x57.png in Resources */,
 				AE6EFA1217E5EA2400CE165C /* Default.png in Resources */,
 				AE6EFA1417E5EA2400CE165C /* Default@2x.png in Resources */,
 				AE6EFA1617E5EA2400CE165C /* Default-568h@2x.png in Resources */,
 				AE6EFA1917E5EA2400CE165C /* MainStoryboard.storyboard in Resources */,
+				AE8307A1183D74CD00B3BA76 /* button-download-small.png in Resources */,
 				AE6EFA8B17E5EB8400CE165C /* appiconStrongLoop57.png in Resources */,
 				AE6EFA8C17E5EB8400CE165C /* button-download-small.png in Resources */,
+				AE8307A0183D74CD00B3BA76 /* appiconStrongLoop57.png in Resources */,
 				AE6EFA8D17E5EB8400CE165C /* button.png in Resources */,
 				AE6EFA8E17E5EB8400CE165C /* icon_57x57.png in Resources */,
 			);
