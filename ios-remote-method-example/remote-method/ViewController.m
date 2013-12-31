@@ -35,11 +35,10 @@
                                   [[result objectForKey:@"currentTax"] objectForKey:@"federal"],
                                   [[result objectForKey:@"currentTax"] objectForKey:@"state"]
                                   ];
-        
     };//end staticMethodSuccessBlock
     
     //Get a local representation of the 'cars' model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelRepository *objectB = [[AppDelegate adapter] repositoryWithModelName:@"products"];
     [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/products/taxInfo" verb:@"GET"] forMethod:@"products.taxInfo"];
     
     // Invoke the invokeStaticMethod message for the 'cars' LBModelPrototype
@@ -68,7 +67,7 @@
     };//end staticMethodSuccessBlock
     
     //Get a local representation of the 'cars' model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"products"];
+    LBModelRepository *objectB = [[AppDelegate adapter] repositoryWithModelName:@"products"];
     [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/products/totalValuation" verb:@"GET"] forMethod:@"products.totalValuation"];
     
     // Invoke the invokeStaticMethod message for the 'cars' LBModelPrototype
@@ -93,7 +92,7 @@
     };//end staticMethodSuccessBlock
     
     //Get a local representation of the 'cars' model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:@"cars"];
+    LBModelRepository *objectB = [[AppDelegate adapter] repositoryWithModelName:@"cars"];
     [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/cars/custommethod3" verb:@"GET"] forMethod:@"cars.custommethod3"];
     
     // Invoke the invokeStaticMethod message for the 'cars' LBModelPrototype

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE353630186516D10070A3D4 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE35362F186516D10070A3D4 /* LoopBack.framework */; };
 		AE6EFA4717E5EA4E00CE165C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA4617E5EA4E00CE165C /* UIKit.framework */; };
 		AE6EFA4917E5EA4E00CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA4817E5EA4E00CE165C /* Foundation.framework */; };
 		AE6EFA4B17E5EA4E00CE165C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA4A17E5EA4E00CE165C /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		AE6EFA6D17E5EA4E00CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA4817E5EA4E00CE165C /* Foundation.framework */; };
 		AE6EFA7517E5EA4E00CE165C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA7317E5EA4E00CE165C /* InfoPlist.strings */; };
 		AE6EFA7817E5EA4E00CE165C /* remote_methodTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6EFA7717E5EA4E00CE165C /* remote_methodTests.m */; };
-		AE6EFA8417E5EAEC00CE165C /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA8317E5EAEC00CE165C /* LoopBack.framework */; };
 		AE6EFA9D17E5F32C00CE165C /* appiconStrongLoop57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA9917E5F32C00CE165C /* appiconStrongLoop57.png */; };
 		AE6EFA9E17E5F32C00CE165C /* button-download-small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA9A17E5F32C00CE165C /* button-download-small.png */; };
 		AE6EFA9F17E5F32C00CE165C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA9B17E5F32C00CE165C /* button.png */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE35362F186516D10070A3D4 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EFA4317E5EA4E00CE165C /* remote-method.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "remote-method.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6EFA4617E5EA4E00CE165C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE6EFA4817E5EA4E00CE165C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		AE6EFA7417E5EA4E00CE165C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6EFA7617E5EA4E00CE165C /* remote_methodTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remote_methodTests.h; sourceTree = "<group>"; };
 		AE6EFA7717E5EA4E00CE165C /* remote_methodTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = remote_methodTests.m; sourceTree = "<group>"; };
-		AE6EFA8317E5EAEC00CE165C /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EFA9917E5F32C00CE165C /* appiconStrongLoop57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appiconStrongLoop57.png; path = "../../../loopback-mobile-getting-started/loopback-ios-app/loopback-ios-multi-model/appiconStrongLoop57.png"; sourceTree = "<group>"; };
 		AE6EFA9A17E5F32C00CE165C /* button-download-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-download-small.png"; path = "../../../loopback-mobile-getting-started/loopback-ios-app/loopback-ios-multi-model/button-download-small.png"; sourceTree = "<group>"; };
 		AE6EFA9B17E5F32C00CE165C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = "../../../loopback-mobile-getting-started/loopback-ios-app/loopback-ios-multi-model/button.png"; sourceTree = "<group>"; };
@@ -76,9 +76,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6EFA4717E5EA4E00CE165C /* UIKit.framework in Frameworks */,
+				AE353630186516D10070A3D4 /* LoopBack.framework in Frameworks */,
 				AE6EFA4917E5EA4E00CE165C /* Foundation.framework in Frameworks */,
 				AE6EFA4B17E5EA4E00CE165C /* CoreGraphics.framework in Frameworks */,
-				AE6EFA8417E5EAEC00CE165C /* LoopBack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 		AE6EFA4517E5EA4E00CE165C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE6EFA8317E5EAEC00CE165C /* LoopBack.framework */,
+				AE35362F186516D10070A3D4 /* LoopBack.framework */,
 				AE6EFA4617E5EA4E00CE165C /* UIKit.framework */,
 				AE6EFA4817E5EA4E00CE165C /* Foundation.framework */,
 				AE6EFA4A17E5EA4E00CE165C /* CoreGraphics.framework */,
@@ -403,7 +403,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-remote-method-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remote-method/remote-method-Prefix.pch";
@@ -418,7 +419,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-remote-method-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "remote-method/remote-method-Prefix.pch";
@@ -481,6 +483,7 @@
 				AE6EFA7D17E5EA4E00CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE6EFA7E17E5EA4E00CE165C /* Build configuration list for PBXNativeTarget "remote-methodTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +492,7 @@
 				AE6EFA8017E5EA4E00CE165C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
