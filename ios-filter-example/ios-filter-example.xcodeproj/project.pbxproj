@@ -21,8 +21,8 @@
 		AE2243D5185F983900C01210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2243B7185F983900C01210 /* UIKit.framework */; };
 		AE2243DD185F983900C01210 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE2243DB185F983900C01210 /* InfoPlist.strings */; };
 		AE2243DF185F983900C01210 /* ios_filter_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2243DE185F983900C01210 /* ios_filter_exampleTests.m */; };
-		AE2243E9185F986F00C01210 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2243E8185F986F00C01210 /* LoopBack.framework */; };
 		AE2243EB185F992500C01210 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = AE2243EA185F992500C01210 /* button.png */; };
+		AE44064F1864D0A900FAF9E4 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE44064E1864D0A900FAF9E4 /* LoopBack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +55,8 @@
 		AE2243DA185F983900C01210 /* ios-filter-exampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ios-filter-exampleTests-Info.plist"; sourceTree = "<group>"; };
 		AE2243DC185F983900C01210 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE2243DE185F983900C01210 /* ios_filter_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_filter_exampleTests.m; sourceTree = "<group>"; };
-		AE2243E8185F986F00C01210 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE2243EA185F992500C01210 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		AE44064E1864D0A900FAF9E4 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE2243B6185F983900C01210 /* CoreGraphics.framework in Frameworks */,
-				AE2243E9185F986F00C01210 /* LoopBack.framework in Frameworks */,
+				AE44064F1864D0A900FAF9E4 /* LoopBack.framework in Frameworks */,
 				AE2243B8185F983900C01210 /* UIKit.framework in Frameworks */,
 				AE2243B4185F983900C01210 /* Foundation.framework in Frameworks */,
 			);
@@ -106,7 +106,7 @@
 		AE2243B2185F983900C01210 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE2243E8185F986F00C01210 /* LoopBack.framework */,
+				AE44064E1864D0A900FAF9E4 /* LoopBack.framework */,
 				AE2243B3185F983900C01210 /* Foundation.framework */,
 				AE2243B5185F983900C01210 /* CoreGraphics.framework */,
 				AE2243B7185F983900C01210 /* UIKit.framework */,
@@ -118,13 +118,13 @@
 		AE2243B9185F983900C01210 /* ios-filter-example */ = {
 			isa = PBXGroup;
 			children = (
-				AE2243C2185F983900C01210 /* AppDelegate.h */,
-				AE2243C3185F983900C01210 /* AppDelegate.m */,
 				AE2243C5185F983900C01210 /* Main.storyboard */,
-				AE2243C8185F983900C01210 /* ViewController.h */,
 				AE2243C9185F983900C01210 /* ViewController.m */,
+				AE2243C8185F983900C01210 /* ViewController.h */,
 				AE2243CB185F983900C01210 /* Images.xcassets */,
 				AE2243EA185F992500C01210 /* button.png */,
+				AE2243C2185F983900C01210 /* AppDelegate.h */,
+				AE2243C3185F983900C01210 /* AppDelegate.m */,
 				AE2243BA185F983900C01210 /* Supporting Files */,
 			);
 			path = "ios-filter-example";
@@ -476,6 +476,7 @@
 				AE2243E4185F983900C01210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AE2243E5185F983900C01210 /* Build configuration list for PBXNativeTarget "ios-filter-exampleTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +485,7 @@
 				AE2243E7185F983900C01210 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

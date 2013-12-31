@@ -1,0 +1,488 @@
+Ttableview-example
+v6
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Info.plist /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist
+cProcessPCH /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch tableview-example/tableview-example-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example normal i386
+cGenerateDSYMFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example
+cCopyStringsFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings tableview-example/en.lproj/InfoPlist.strings
+cCpResource tableview-example/button.png build/Release-iphonesimulator/tableview-example.app/button.png
+cCpResource tableview-example/button.png build/Release-iphonesimulator/tableview-example.app/button.png
+cCpResource tableview-example/icon_57x57.png build/Release-iphonesimulator/tableview-example.app/icon_57x57.png
+cCpResource tableview-example/icon_57x57.png build/Release-iphonesimulator/tableview-example.app/icon_57x57.png
+cCpResource tableview-example/Default.png build/Release-iphonesimulator/tableview-example.app/Default.png
+cCpResource tableview-example/Default@2x.png build/Release-iphonesimulator/tableview-example.app/Default@2x.png
+cCpResource tableview-example/Default-568h@2x.png build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png
+cCompileStoryboard /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard
+cCpResource tableview-example/button-download-small.png build/Release-iphonesimulator/tableview-example.app/button-download-small.png
+cCpResource tableview-example/button-download-small.png build/Release-iphonesimulator/tableview-example.app/button-download-small.png
+cCpResource tableview-example/appiconStrongLoop57.png build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png
+cCpResource tableview-example/appiconStrongLoop57.png build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png
+cTouch /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk
+c00000000528A7CD70000000000000176
+t1384807639
+s374
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/SDKSettings.plist
+c00000000523B873F00000000000003B5
+t1379632959
+s949
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/CoreServices/SystemVersion.plist
+c00000000526965AC00000000000001A0
+t1382639020
+s416
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c00000000526965AE0000000000445870
+t1382639022
+s4479088
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c00000000526965AF000000000088C680
+t1382639023
+s8963712
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c00000000526965B40000000001DB9910
+t1382639028
+s31168784
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/LoopBack
+c0000000052B0F55500000000004D4DD4
+t1387328853
+s5066196
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app
+t1388455135
+s442
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM
+t2
+s0
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png
+t1388455135
+s18594
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default.png
+t1388455135
+s6540
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default@2x.png
+t1388455135
+s16107
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Info.plist
+t1388455134
+s863
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/PkgInfo
+t1388455134
+s8
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png
+t1388455135
+s5904
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button-download-small.png
+t1388455135
+s4248
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button.png
+t1388455135
+s3788
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings
+t1388455135
+s42
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/MainStoryboard.storyboardc
+t1388455135
+s170
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/icon_57x57.png
+t1388455135
+s6487
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example
+t1388455135
+s325572
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o
+t1388455135
+s66752
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o
+t1388455135
+s89628
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o
+t1388455135
+s3452
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/tableview-example.LinkFileList
+c0000000052C224DE00000000000002A2
+t1388455134
+s674
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m
+c0000000052B4DFE5000000000000096C
+t1387585509
+s2412
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default-568h@2x.png
+c00000000528BB99D00000000000048A2
+t1384888733
+s18594
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default.png
+c00000000528BB99D000000000000198C
+t1384888733
+s6540
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default@2x.png
+c00000000528BB99D0000000000003EEB
+t1384888733
+s16107
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m
+c0000000052B488DB000000000000213B
+t1387563227
+s8507
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/appiconStrongLoop57.png
+c00000000528BB99D0000000000001710
+t1384888733
+s5904
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/button-download-small.png
+c00000000528BB99D0000000000001098
+t1384888733
+s4248
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/button.png
+c00000000528BB99D0000000000000ECC
+t1384888733
+s3788
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/InfoPlist.strings
+c00000000528BB99D000000000000002D
+t1384888733
+s45
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard
+c00000000528E4F380000000000003ED6
+t1385058104
+s16086
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/icon_57x57.png
+c00000000528BB99D0000000000001957
+t1384888733
+s6487
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m
+c00000000528BB99D000000000000015E
+t1384888733
+s350
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist
+c00000000528BB99D00000000000004D5
+t1384888733
+s1237
+
+N/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Prefix.pch
+c00000000528BB99D0000000000000151
+t1384888733
+s337
+
+N/var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch
+t1388455135
+s5345440
+
+CCheck dependencies
+r0
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies5e659d5e5c72b841^b4caa85e5c72b841^-936"Warning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button-download-small.pngWarning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.pngWarning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button.pngWarning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/icon_57x57.png4(21%IDEActivityLogMessage2@240"Warning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button-download-small.png-410147934#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@238"Warning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png-410147934#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@225"Warning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button.png-410147934#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--2@229"Warning: Multiple build commands for output file /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/icon_57x57.png-410147934#18446744073709551615#0#-1#27"com.apple.dt.IDE.LogMessage-27"Dependency Analysis Warning--0#1#1#--18"Check dependencies36"574AA334-5959-4161-BB3F-6A1861DA3953-
+
+CCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410147935.264850
+e410147935.393809
+r1
+xCompileC
+xbuild/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LoopBack.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBModel.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemoting.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemotingUtils.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTContract.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLObject.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBInstallation.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBPushNotification.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"Compile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m220"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o tableview-example/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0682445f5c72b841^abd0645f5c72b841^---0#0#1#-19%DVTDocumentLocation2@161"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m0000000000000000^5585"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o tableview-example/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-generated-files.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-own-target-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-all-target-headers.hmap -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-project-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources/i386 -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch -MMD -MT dependencies -MF /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.d --serialize-diagnostics /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.dia -c /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.m -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o36"42796254-22B5-41DA-9E6D-00DF67B0A4D3-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410147935.267490
+e410147935.475356
+r1
+xCompileC
+xbuild/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LoopBack.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBModel.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemoting.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemotingUtils.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTContract.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLObject.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBInstallation.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBPushNotification.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection156"Compile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m226"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o tableview-example/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler51be445f5c72b841^7db3795f5c72b841^---0#0#1#-19%DVTDocumentLocation2@164"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m0000000000000000^5603"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o tableview-example/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-generated-files.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-own-target-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-all-target-headers.hmap -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-project-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources/i386 -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch -MMD -MT dependencies -MF /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.d --serialize-diagnostics /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.dia -c /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/ViewController.m -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o36"E0CD904F-D65F-4AB8-B044-7AD5FF3ABCF5-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410147935.264753
+e410147935.337201
+r1
+xCompileC
+xbuild/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/AppDelegate.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LoopBack.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBModel.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemoting.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRemotingUtils.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLRESTContract.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/SLObject.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBRESTAdapter.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBInstallation.h
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/Headers/LBPushNotification.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection146"Compile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m206"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o tableview-example/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6f81445f5c72b841^7975565f5c72b841^---0#0#1#-19%DVTDocumentLocation2@154"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m0000000000000000^5543"CompileC build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o tableview-example/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-generated-files.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-own-target-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-all-target-headers.hmap -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-project-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources/i386 -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch -MMD -MT dependencies -MF /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.dia -c /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/main.m -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o36"7C809BCF-AF9C-4C0A-81DC-4B978C8B882B-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCompileStoryboard /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard
+s410147935.713105
+e410147935.985395
+r1
+xCompileStoryboard
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection70"CompileStoryboard tableview-example/en.lproj/MainStoryboard.storyboard70"CompileStoryboard tableview-example/en.lproj/MainStoryboard.storyboard32b0b65f5c72b841^0c56fc5f5c72b841^---0#0#1#-19%DVTDocumentLocation2@182"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard0000000000000000^1788"CompileStoryboard tableview-example/en.lproj/MainStoryboard.storyboard    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv IBSC_MINIMUM_COMPATIBILITY_VERSION 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    setenv XCODE_DEVELOPER_USR_PATH /Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 6.1 --output-format human-readable-text --compile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/MainStoryboard.storyboardc /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/MainStoryboard.storyboard36"B52AD0A5-A1E1-412E-A173-9AA1BD3A3E4B-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCopyStringsFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings tableview-example/en.lproj/InfoPlist.strings
+s410147935.702204
+e410147935.708260
+r1
+xCopyStringsFile
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings
+xtableview-example/en.lproj/InfoPlist.strings
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection49"Copy tableview-example/en.lproj/InfoPlist.strings139"CopyStringsFile build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings tableview-example/en.lproj/InfoPlist.strings8c4cb45f5c72b841^3563b55f5c72b841^---0#0#1#-19%DVTDocumentLocation2@174"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/en.lproj/InfoPlist.strings0000000000000000^1446"CopyStringsFile build/Release-iphonesimulator/tableview-example.app/en.lproj/InfoPlist.strings tableview-example/en.lproj/InfoPlist.strings    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/en.lproj -- tableview-example/en.lproj/InfoPlist.strings36"871A3524-77AC-4A47-9F11-EEBAE0E90711-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/Default-568h@2x.png build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png
+s410147935.712377
+e410147935.752688
+r1
+xCpResource
+xtableview-example/Default-568h@2x.png
+xbuild/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Copy build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png120"CpResource tableview-example/Default-568h@2x.png build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png1285b65f5c72b841^4e97c15f5c72b841^---0#0#1#-19%DVTDocumentLocation2@201"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png0038e028dfffdf42^1670"CpResource tableview-example/Default-568h@2x.png build/Release-iphonesimulator/tableview-example.app/Default-568h@2x.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default-568h@2x.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"78C32223-8DF1-4E9A-B650-F2687C50BD65-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/Default.png build/Release-iphonesimulator/tableview-example.app/Default.png
+s410147935.709635
+e410147935.714939
+r1
+xCpResource
+xtableview-example/Default.png
+xbuild/Release-iphonesimulator/tableview-example.app/Default.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection68"Copy build/Release-iphonesimulator/tableview-example.app/Default.png104"CpResource tableview-example/Default.png build/Release-iphonesimulator/tableview-example.app/Default.png58cbb55f5c72b841^e23db75f5c72b841^---0#0#1#-19%DVTDocumentLocation2@193"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default.png0038e028dfffdf42^1646"CpResource tableview-example/Default.png build/Release-iphonesimulator/tableview-example.app/Default.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"28F2D23E-24E9-42DC-98ED-93ED79910977-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/Default@2x.png build/Release-iphonesimulator/tableview-example.app/Default@2x.png
+s410147935.710346
+e410147935.717427
+r1
+xCpResource
+xtableview-example/Default@2x.png
+xbuild/Release-iphonesimulator/tableview-example.app/Default@2x.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy build/Release-iphonesimulator/tableview-example.app/Default@2x.png110"CpResource tableview-example/Default@2x.png build/Release-iphonesimulator/tableview-example.app/Default@2x.pngfa0eb65f5c72b841^abaeb75f5c72b841^---0#0#1#-19%DVTDocumentLocation2@196"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Default@2x.png0038e028dfffdf42^1655"CpResource tableview-example/Default@2x.png build/Release-iphonesimulator/tableview-example.app/Default@2x.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/Default@2x.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"187FDF21-FB97-410B-8A3F-2E117F85F70F-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/appiconStrongLoop57.png build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png
+s410147935.759520
+e410147935.762677
+r1
+xCpResource
+xtableview-example/appiconStrongLoop57.png
+xbuild/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection80"Copy build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png128"CpResource tableview-example/appiconStrongLoop57.png build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.pngb895c25f5c72b841^342fc35f5c72b841^---0#0#1#-19%DVTDocumentLocation2@205"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png0038e028dfffdf42^1682"CpResource tableview-example/appiconStrongLoop57.png build/Release-iphonesimulator/tableview-example.app/appiconStrongLoop57.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/appiconStrongLoop57.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"4A97C67A-EF55-491B-BECB-277B89CE0BCC-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/button-download-small.png build/Release-iphonesimulator/tableview-example.app/button-download-small.png
+s410147935.719033
+e410147935.757920
+r1
+xCpResource
+xtableview-example/button-download-small.png
+xbuild/Release-iphonesimulator/tableview-example.app/button-download-small.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Copy build/Release-iphonesimulator/tableview-example.app/button-download-small.png132"CpResource tableview-example/button-download-small.png build/Release-iphonesimulator/tableview-example.app/button-download-small.png2635b85f5c72b841^f8ffc15f5c72b841^---0#0#1#-19%DVTDocumentLocation2@207"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button-download-small.png0038e028dfffdf42^1688"CpResource tableview-example/button-download-small.png build/Release-iphonesimulator/tableview-example.app/button-download-small.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/button-download-small.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"D938091B-450D-498D-BEB5-F19BBBD44A4B-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/button.png build/Release-iphonesimulator/tableview-example.app/button.png
+s410147935.704159
+e410147935.709266
+r1
+xCpResource
+xtableview-example/button.png
+xbuild/Release-iphonesimulator/tableview-example.app/button.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Copy build/Release-iphonesimulator/tableview-example.app/button.png102"CpResource tableview-example/button.png build/Release-iphonesimulator/tableview-example.app/button.pngc362b45f5c72b841^6e88b55f5c72b841^---0#0#1#-19%DVTDocumentLocation2@192"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/button.png0038e028dfffdf42^1643"CpResource tableview-example/button.png build/Release-iphonesimulator/tableview-example.app/button.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/button.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"AF1B6F7A-E3D9-47BE-8E47-B989EF7112F1-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CCpResource tableview-example/icon_57x57.png build/Release-iphonesimulator/tableview-example.app/icon_57x57.png
+s410147935.707597
+e410147935.712208
+r1
+xCpResource
+xtableview-example/icon_57x57.png
+xbuild/Release-iphonesimulator/tableview-example.app/icon_57x57.png
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection71"Copy build/Release-iphonesimulator/tableview-example.app/icon_57x57.png110"CpResource tableview-example/icon_57x57.png build/Release-iphonesimulator/tableview-example.app/icon_57x57.png1747b55f5c72b841^4e64b65f5c72b841^---0#0#1#-19%DVTDocumentLocation2@196"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/icon_57x57.png0038e028dfffdf42^1655"CpResource tableview-example/icon_57x57.png build/Release-iphonesimulator/tableview-example.app/icon_57x57.png    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/icon_57x57.png /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app36"E20C2032-8BAE-4730-8870-2CF5C12F44F1-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CGenerateDSYMFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example
+s410147935.606474
+e410147935.694096
+r1
+xGenerateDSYMFile
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection179"Generate /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM143"GenerateDSYMFile build/Release-iphonesimulator/tableview-example.app.dSYM build/Release-iphonesimulator/tableview-example.app/tableview-example596c9b5f5c72b841^7db3b15f5c72b841^---0#0#1#-19%DVTDocumentLocation2@186"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM0038e028dfffdf42^1595"GenerateDSYMFile build/Release-iphonesimulator/tableview-example.app.dSYM build/Release-iphonesimulator/tableview-example.app/tableview-example    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app.dSYM36"060D2877-B255-46DA-AB14-8F45BEE6CD4F-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CLd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example normal i386
+s410147935.487445
+e410147935.597306
+r1
+xLd
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example
+xnormal
+xi386
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/tableview-example.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/crt1.o
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/main.o
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/AppDelegate.o
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/ViewController.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/LoopBack.framework/LoopBack
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.0/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libdnsinfo.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection188"Link /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example84"Ld build/Release-iphonesimulator/tableview-example.app/tableview-example normal i3861de57c5f5c72b841^faf0985f5c72b841^---0#0#1#--2816"Ld build/Release-iphonesimulator/tableview-example.app/tableview-example normal i386    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv IPHONEOS_DEPLOYMENT_TARGET 6.1    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -L/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -filelist /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/tableview-example.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=6.1 -framework UIKit -framework LoopBack -framework Foundation -framework CoreGraphics -Xlinker -dependency_info -Xlinker /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/Objects-normal/i386/tableview-example_dependency_info.dat -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/tableview-example36"7138616B-AD25-4AA6-A900-28E1B100AFEB-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CProcessInfoPlistFile /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Info.plist /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist
+s410147934.660731
+e410147934.666854
+r1
+xProcessInfoPlistFile
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Info.plist
+x/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection168"Process /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist130"ProcessInfoPlistFile build/Release-iphonesimulator/tableview-example.app/Info.plist tableview-example/tableview-example-Info.plistd655a95e5c72b841^8cf8aa5e5c72b841^---0#0#1#-19%DVTDocumentLocation2@176"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist0000000000000000^1742"ProcessInfoPlistFile build/Release-iphonesimulator/tableview-example.app/Info.plist tableview-example/tableview-example-Info.plist    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    builtin-infoPlistUtility /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Info.plist -genpkginfo /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app/Info.plist36"D0D168D6-6A9B-4650-A147-F44D47417968-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CProcessPCH /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch tableview-example/tableview-example-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s410147934.677717
+e410147935.256375
+r1
+xProcessPCH
+x/var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch
+xtableview-example/tableview-example-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection57"Precompile tableview-example/tableview-example-Prefix.pch330"ProcessPCH /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch tableview-example/tableview-example-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler0ebdad5e5c72b841^8fc2415f5c72b841^---0#0#1#-19%DVTDocumentLocation2@176"file://localhost/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Prefix.pch0000000000000000^5440"ProcessPCH /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch tableview-example/tableview-example-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/gems/ruby-1.9.2-p320@global/bin:/Users/mattschmulen/.rvm/rubies/ruby-1.9.2-p320/bin:/Users/mattschmulen/.rvm/bin:/usr/local/heroku/bin:/Users/mattschmulen/life-chromium/depot_tools:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/Users/mattschmulen/tools/devkit/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/deployd/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/platform-tools:/Users/mattschmulen/Library/Developer/Android/adt-bundle-mac-x86_64-20130717/sdk/tools:/Users/mattschmulen/.ec2/bin:/Applications/MacVim-snapshot-66:/usr/local/go/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wno-bool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.1 -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-generated-files.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-own-target-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-all-target-headers.hmap -iquote /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/tableview-example-project-headers.hmap -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources/i386 -I/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/tableview-example.build/Release-iphonesimulator/tableview-example.build/DerivedSources -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -F/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.d -c /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/tableview-example/tableview-example-Prefix.pch -o /var/folders/xs/6d2shywx3td61nlf1sd1grm80000gn/C/com.apple.DeveloperTools/5.0.2-5A3005/Xcode/SharedPrecompiledHeaders/tableview-example-Prefix-bmrcoulgfdjsgydybztwvnbvzema/tableview-example-Prefix.pch.pch36"18DDCC1D-D929-4E9A-9310-F0727F2B0B5E-
+b3D8B8D9A-2BBC-4374-AB77-98C5517F2BA5
+
+CTouch /Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example/build/Release-iphonesimulator/tableview-example.app
+r0
+

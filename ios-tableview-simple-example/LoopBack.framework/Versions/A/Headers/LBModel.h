@@ -15,7 +15,7 @@
 @interface LBModel : SLObject
 
 /** All Models have a numerical `id` field. */
-@property (nonatomic, readonly, copy) NSNumber *_id;
+@property (nonatomic, readonly, copy) id _id;
 
 /**
  * Returns the value associated with a given key.
@@ -95,7 +95,7 @@ typedef void (^LBModelDestroySuccessBlock)();
  * the name of the model type for easy LBModel creation, discovery, and
  * management.
  */
-@interface LBModelPrototype : SLPrototype
+@interface LBModelRepository : SLRepository
 
 /** The LBModel subclass used to wrap model instances. */
 @property Class modelClass;
@@ -117,13 +117,13 @@ typedef void (^LBModelDestroySuccessBlock)();
 - (LBModel *)modelWithDictionary:(NSDictionary *)dictionary;
 
 //typedef void (^LBModelExistsSuccessBlock)(BOOL exists);
-//- (void)existsWithId:(NSNumber *)_id
+//- (void)existsWithId:(id)_id
 //             success:(LBModelExistsSuccessBlock)success
 //             failure:(SLFailureBlock)failure;
 
 /**
  * Blocks of this type are executed when
- * LBModelPrototype::findWithId:success:failure: is successful.
+ * LBModelRepository::findById:success:failure: is successful.
  */
 typedef void (^LBModelFindSuccessBlock)(LBModel *model);
 /**
@@ -134,13 +134,13 @@ typedef void (^LBModelFindSuccessBlock)(LBModel *model);
  * @param success  The block to be executed when the destroy is successful.
  * @param failure  The block to be executed when the destroy fails.
  */
-- (void)findWithId:(NSNumber *)_id
+- (void)findById:(id)_id
            success:(LBModelFindSuccessBlock)success
            failure:(SLFailureBlock)failure;
 
 /**
  * Blocks of this type are executed when
- * LBModelPrototype::allWithSuccess:failure: is successful.
+ * LBModelRepository::allWithSuccess:failure: is successful.
  */
 typedef void (^LBModelAllSuccessBlock)(NSArray *models);
 /**

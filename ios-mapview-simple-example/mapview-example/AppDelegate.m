@@ -18,7 +18,7 @@ static LBRESTAdapter * _adapter = nil;
 + (LBRESTAdapter *) adapter
 {
     if( !_adapter)
-        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000"]];
+        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000/api"]];
     return _adapter;
 }
 

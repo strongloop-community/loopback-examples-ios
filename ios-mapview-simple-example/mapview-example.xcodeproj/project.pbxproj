@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE44064B1864CD7C00FAF9E4 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE44064A1864CD7C00FAF9E4 /* LoopBack.framework */; };
 		AE6EF9B917E5EA0A00CE165C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EF9B817E5EA0A00CE165C /* UIKit.framework */; };
 		AE6EF9BB17E5EA0A00CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EF9BA17E5EA0A00CE165C /* Foundation.framework */; };
 		AE6EF9BD17E5EA0A00CE165C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EF9BC17E5EA0A00CE165C /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		AE6EF9DF17E5EA0A00CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EF9BA17E5EA0A00CE165C /* Foundation.framework */; };
 		AE6EF9E717E5EA0A00CE165C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE6EF9E517E5EA0A00CE165C /* InfoPlist.strings */; };
 		AE6EF9EA17E5EA0A00CE165C /* mapview_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6EF9E917E5EA0A00CE165C /* mapview_exampleTests.m */; };
-		AE6EFA8217E5EAD500CE165C /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA8117E5EAD500CE165C /* LoopBack.framework */; };
 		AE6EFA9117E5EF3700CE165C /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6EFA9017E5EF3700CE165C /* MapAnnotation.m */; };
 		AE6EFA9417E5EF4A00CE165C /* HQAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6EFA9317E5EF4A00CE165C /* HQAnnotation.m */; };
 		AE6EFA9617E5F28B00CE165C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA9517E5F28B00CE165C /* MapKit.framework */; };
@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE44064A1864CD7C00FAF9E4 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EF9B517E5EA0A00CE165C /* mapview-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mapview-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6EF9B817E5EA0A00CE165C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE6EF9BA17E5EA0A00CE165C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -63,7 +64,6 @@
 		AE6EF9E617E5EA0A00CE165C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6EF9E817E5EA0A00CE165C /* mapview_exampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mapview_exampleTests.h; sourceTree = "<group>"; };
 		AE6EF9E917E5EA0A00CE165C /* mapview_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mapview_exampleTests.m; sourceTree = "<group>"; };
-		AE6EFA8117E5EAD500CE165C /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EFA8F17E5EF3700CE165C /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		AE6EFA9017E5EF3700CE165C /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		AE6EFA9217E5EF4A00CE165C /* HQAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HQAnnotation.h; sourceTree = "<group>"; };
@@ -78,11 +78,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6EFA9817E5F29100CE165C /* CoreLocation.framework in Frameworks */,
+				AE44064B1864CD7C00FAF9E4 /* LoopBack.framework in Frameworks */,
 				AE6EFA9617E5F28B00CE165C /* MapKit.framework in Frameworks */,
 				AE6EF9B917E5EA0A00CE165C /* UIKit.framework in Frameworks */,
 				AE6EF9BB17E5EA0A00CE165C /* Foundation.framework in Frameworks */,
 				AE6EF9BD17E5EA0A00CE165C /* CoreGraphics.framework in Frameworks */,
-				AE6EFA8217E5EAD500CE165C /* LoopBack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +121,9 @@
 		AE6EF9B717E5EA0A00CE165C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE44064A1864CD7C00FAF9E4 /* LoopBack.framework */,
 				AE6EFA9717E5F29100CE165C /* CoreLocation.framework */,
 				AE6EFA9517E5F28B00CE165C /* MapKit.framework */,
-				AE6EFA8117E5EAD500CE165C /* LoopBack.framework */,
 				AE6EF9B817E5EA0A00CE165C /* UIKit.framework */,
 				AE6EF9BA17E5EA0A00CE165C /* Foundation.framework */,
 				AE6EF9BC17E5EA0A00CE165C /* CoreGraphics.framework */,
@@ -407,7 +407,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-mapview-simple-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mapview-example/mapview-example-Prefix.pch";
@@ -422,7 +423,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-mapview-simple-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "mapview-example/mapview-example-Prefix.pch";

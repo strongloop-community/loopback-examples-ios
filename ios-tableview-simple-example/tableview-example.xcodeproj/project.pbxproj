@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0F9DE41864BF3600CBD030 /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE0F9DE31864BF3600CBD030 /* LoopBack.framework */; };
 		AE6EFA0017E5EA2400CE165C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EF9FF17E5EA2400CE165C /* UIKit.framework */; };
 		AE6EFA0217E5EA2400CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA0117E5EA2400CE165C /* Foundation.framework */; };
 		AE6EFA0417E5EA2400CE165C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA0317E5EA2400CE165C /* CoreGraphics.framework */; };
@@ -23,7 +24,6 @@
 		AE6EFA2617E5EA2400CE165C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA0117E5EA2400CE165C /* Foundation.framework */; };
 		AE6EFA2E17E5EA2400CE165C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA2C17E5EA2400CE165C /* InfoPlist.strings */; };
 		AE6EFA3117E5EA2400CE165C /* tableview_exampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE6EFA3017E5EA2400CE165C /* tableview_exampleTests.m */; };
-		AE6EFA8617E5EAFF00CE165C /* LoopBack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6EFA8517E5EAFF00CE165C /* LoopBack.framework */; };
 		AE6EFA8B17E5EB8400CE165C /* appiconStrongLoop57.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8717E5EB8400CE165C /* appiconStrongLoop57.png */; };
 		AE6EFA8C17E5EB8400CE165C /* button-download-small.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8817E5EB8400CE165C /* button-download-small.png */; };
 		AE6EFA8D17E5EB8400CE165C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = AE6EFA8917E5EB8400CE165C /* button.png */; };
@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE0F9DE31864BF3600CBD030 /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EF9FC17E5EA2400CE165C /* tableview-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tableview-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE6EF9FF17E5EA2400CE165C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AE6EFA0117E5EA2400CE165C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,7 +68,6 @@
 		AE6EFA2D17E5EA2400CE165C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE6EFA2F17E5EA2400CE165C /* tableview_exampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tableview_exampleTests.h; sourceTree = "<group>"; };
 		AE6EFA3017E5EA2400CE165C /* tableview_exampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableview_exampleTests.m; sourceTree = "<group>"; };
-		AE6EFA8517E5EAFF00CE165C /* LoopBack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoopBack.framework; sourceTree = "<group>"; };
 		AE6EFA8717E5EB8400CE165C /* appiconStrongLoop57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appiconStrongLoop57.png; sourceTree = "<group>"; };
 		AE6EFA8817E5EB8400CE165C /* button-download-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-download-small.png"; sourceTree = "<group>"; };
 		AE6EFA8917E5EB8400CE165C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -84,9 +84,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE6EFA0017E5EA2400CE165C /* UIKit.framework in Frameworks */,
+				AE0F9DE41864BF3600CBD030 /* LoopBack.framework in Frameworks */,
 				AE6EFA0217E5EA2400CE165C /* Foundation.framework in Frameworks */,
 				AE6EFA0417E5EA2400CE165C /* CoreGraphics.framework in Frameworks */,
-				AE6EFA8617E5EAFF00CE165C /* LoopBack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		AE6EF9FE17E5EA2400CE165C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AE6EFA8517E5EAFF00CE165C /* LoopBack.framework */,
+				AE0F9DE31864BF3600CBD030 /* LoopBack.framework */,
 				AE6EF9FF17E5EA2400CE165C /* UIKit.framework */,
 				AE6EFA0117E5EA2400CE165C /* Foundation.framework */,
 				AE6EFA0317E5EA2400CE165C /* CoreGraphics.framework */,
@@ -419,7 +419,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tableview-example/tableview-example-Prefix.pch";
@@ -434,7 +435,8 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/mattschmulen/life-strongloop/trees/strongloop-community/loopback-examples-ios/ios-tableview-simple-example",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "tableview-example/tableview-example-Prefix.pch";

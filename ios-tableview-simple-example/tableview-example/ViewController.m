@@ -35,7 +35,7 @@
         NSLog( @"Error %@", error.description);
     };//end selfFailblock
     
-    // Define the load success block for the LBModelPrototype allWithSuccess message
+    // Define the load success block for the LBModelRepository allWithSuccess message
     void (^loadSuccessBlock)(NSArray *) = ^(NSArray *models) {
         NSLog( @"selfSuccessBlock %d", models.count);
         self.tableData  = models;
@@ -44,9 +44,9 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the model type
-    LBModelPrototype *objectB = [[AppDelegate adapter] prototypeWithName:prototypeName];
+    LBModelRepository *objectB = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
     
-    // Invoke the allWithSuccess message for the LBModelPrototype
+    // Invoke the allWithSuccess message for the LBModelRepository
     // Equivalent http JSON endpoint request : http://localhost:3000/products
     
     [objectB allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
@@ -61,7 +61,7 @@
     
     ///*
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:prototypeName];
+    LBModelRepository *prototype = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
     
     //create new LBModel of type
     LBModel *model = [prototype modelWithDictionary:@{ @"name": @"New Product", @"inventory" : @99 }];
@@ -111,11 +111,11 @@
     };
     
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [[AppDelegate adapter] prototypeWithName:prototypeName];
+    LBModelRepository *prototype = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
     
     //Get the instance of the model with ID = 2
-    // Equivalent http JSON endpoint request : http://localhost:3000/products/2
-    [prototype findWithId:@2 success:findSuccessBlock failure:findErrorBlock ];
+    // Equivalent http JSON endpoint request : http://localhost:3000/api/products/2
+    [prototype findById:@2 success:findSuccessBlock failure:findErrorBlock ];
     
 }//end updateExistingModelAndPushToServer
 
@@ -149,11 +149,11 @@
     };
     
     //Get a local representation of the model type
-    LBModelPrototype *prototype = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    LBModelRepository *prototype = [ [AppDelegate adapter] repositoryWithModelName:prototypeName];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
-    [prototype findWithId:@2 success:findSuccessBlock failure:findErrorBlock ];
+    [prototype findById:@2 success:findSuccessBlock failure:findErrorBlock ];
     
 }//end deleteExistingModel
 
@@ -181,7 +181,7 @@
 }
 
 - (IBAction)actionInjectData:(id)sender {
-    LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:prototypeName];
+    LBModelRepository *ObjectPrototype = [ [AppDelegate adapter]  repositoryWithModelName:prototypeName];
     
     void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
         NSLog( @"initializeServerWithData: Error on Save %@", error.description);

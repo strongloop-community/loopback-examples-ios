@@ -10,12 +10,12 @@
 #import "SLAdapter.h"
 
 /**
- * An error description for SLObjects with an invalid prototype, which happens
+ * An error description for SLObjects with an invalid repository, which happens
  * when SLObjects are created improperly.
  */
-extern NSString *SLObjectInvalidPrototypeDescription;
+extern NSString *SLObjectInvalidRepositoryDescription;
 
-@class SLPrototype;
+@class SLRepository;
 
 /**
  * A local representative of a single virtual object. The behaviour of this
@@ -24,8 +24,8 @@ extern NSString *SLObjectInvalidPrototypeDescription;
  */
 @interface SLObject : NSObject
 
-/** The SLPrototype that this object was created from. */
-@property (readonly, nonatomic, weak) SLPrototype *prototype;
+/** The SLRepository defining the type of this object. */
+@property (readonly, nonatomic, weak) SLRepository *repository;
 
 /**
  * The complete set of parameters to be used to identify/create this object on
@@ -34,23 +34,23 @@ extern NSString *SLObjectInvalidPrototypeDescription;
 @property (readonly, nonatomic, strong) NSDictionary *creationParameters;
 
 /**
- * Returns a new object from the given prototype.
+ * Returns a new object with the type defined by given repository.
  *
- * @param  prototype   The prototype this object should inherit from.
+ * @param  repository  The repository this object is associated with.
  * @param  parameters  The creationParameters of the new object.
  * @return             A new object.
  */
-+ (instancetype)objectWithPrototype:(SLPrototype *)prototype
++ (instancetype)objectWithRepository:(SLRepository *)repository
                          parameters:(NSDictionary *)parameters;
 
 /**
- * Initializes a new object with the given prototype.
+ * Initializes a new object with the type defined by the given repository.
  *
- * @param  prototype   The prototype this object should inherit from.
+ * @param  repository  The repository this object is associated with.
  * @param  parameters  The creationParameters of the new object.
  * @return             The new object.
  */
-- (instancetype)initWithPrototype:(SLPrototype *)prototype
+- (instancetype)initWithRepository:(SLRepository *)repository
                        parameters:(NSDictionary *)parameters;
 
 /**
@@ -78,38 +78,38 @@ extern NSString *SLObjectInvalidPrototypeDescription;
  * A local representative of classes ("prototypes" in JavaScript) defined and
  * made remotable on the server.
  */
-@interface SLPrototype : NSObject
+@interface SLRepository : NSObject
 
-/** The name given to this prototype on the server. */
+/** The name given to this class on the server. */
 @property (readonly, nonatomic, copy) NSString *className;
 
 /**
  * The SLAdapter that should be used for invoking methods, both for static
- * methods on this prototype and all methods on all instances of this prototype.
+ * methods on this repository and all methods on all instances of this class.
  */
 @property (readwrite, nonatomic) SLAdapter *adapter;
 
 /**
- * Returns a new Prototype representing the named remote class.
+ * Returns a new Repository representing the named remote class.
  *
  * @param  name  The remote class name.
- * @return       A prototype.
+ * @return       A repository.
  */
-+ (instancetype)prototypeWithName:(NSString *)name;
++ (instancetype)repositoryWithClassName:(NSString *)name;
 
 /**
- * Initializes a new Prototype, associating it with the named remote class.
+ * Initializes a new Repository, associating it with the named remote class.
  *
  * @param  name  The remote class name.
- * @return       The prototype.
+ * @return       The repository.
  */
-- (instancetype)initWithName:(NSString *)name;
+- (instancetype)initWithClassName:(NSString *)name;
 
 /**
  * Returns a new SLObject as a virtual instance of this remote class.
  *
  * @param  parameters  The `creationParameters` of the new SLObject.
- * @return             A new SLObject based on this prototype.
+ * @return             A new SLObject based on this class.
  */
 - (SLObject *)objectWithParameters:(NSDictionary *)parameters;
 

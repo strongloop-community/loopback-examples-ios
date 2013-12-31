@@ -9,28 +9,21 @@
 #import "ViewController.h"
 #import "AppDelegate.h"
 
-#define prototypeName @"ships"
+#define prototypeName @"locations"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet MKMapView *myMapView;
-
 @property (nonatomic) CLLocation *location;
-
 @property (nonatomic, strong) NSMutableArray *mapAnnotations;
 
-
-//StrongLoop HQ
-@property (nonatomic, strong) HQAnnotation *hqAnnotation;
-//San Francisco City
-@property (nonatomic, strong) MapAnnotation *sfAnnotation;
+@property (nonatomic, strong) HQAnnotation *hqAnnotation; //StrongLoop HQ
+@property (nonatomic, strong) MapAnnotation *sfAnnotation; //San Francisco City
 
 @end
 
 @implementation ViewController
 
-
-// http://localhost:3000/stores?filter[where][geo][near]=4,10
-
+// http://localhost:3000/api/locations?filter[where][geo][near]=4,10
 
 /*
  [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/location/nearby" verb:@"GET"] forMethod:@"locations.getNearestFew"];
@@ -98,7 +91,7 @@
             
             MapAnnotation *annot = [[MapAnnotation alloc] initWithLocation:locCord];
             annot.title = [modelInstance objectForKeyedSubscript:@"name"];
-            annot.subtitle = [modelInstance objectForKeyedSubscript:@"SHIPTYPE"];
+            annot.subtitle = [modelInstance objectForKeyedSubscript:@"LOCATIONTYPE"];
             
             [self.mapAnnotations addObject:annot ];
             
@@ -114,11 +107,11 @@
         
     };//end selfSuccessBlock
     
-    //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectB = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    //Get a local representation of the 'locations' model type
+    LBModelRepository *objectB = [ [AppDelegate adapter] repositoryWithModelName:prototypeName];
     
-    // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
-    // Equivalent http JSON endpoint request : http://localhost:3000/ships
+    // Invoke the allWithSuccess message for the 'locations' LBModelPrototype
+    // Equivalent http JSON endpoint request : http://localhost:3000/locations
     
     [objectB allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
 }
@@ -128,8 +121,8 @@
 {
     // ++++++++++++++++++++++++++++++++++++
     
-    // Get Nearest Ship
-    // http://localhost:3000/ships?filter%5Blimit%5D=1
+    // Get Nearest Location
+    // http://localhost:3000/locations?filter%5Blimit%5D=1
     // curl http://localhost:3000/location/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
     // ++++++++++++++++++++++++++++++++++++
     
@@ -157,7 +150,7 @@
             
             MapAnnotation *annot = [[MapAnnotation alloc] initWithLocation:locCord];
             annot.title = [modelInstance objectForKeyedSubscript:@"name"];
-            annot.subtitle = [modelInstance objectForKeyedSubscript:@"SHIPTYPE"];
+            annot.subtitle = [modelInstance objectForKeyedSubscript:@"LOCATIONTYPE"];
             
             [self.mapAnnotations addObject:annot ];
             
@@ -173,18 +166,18 @@
         
     };//end selfSuccessBlock
     
-    //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectProto = [ [AppDelegate adapter] prototypeWithName:prototypeName];
+    //Get a local representation of the 'locations' model type
+    LBModelRepository *objectProto = [ [AppDelegate adapter] repositoryWithModelName:prototypeName];
     
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships" verb:@"GET"] forMethod:@"ships.filter"];
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships/nearby" verb:@"GET"] forMethod:@"ships.nearby"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/locations" verb:@"GET"] forMethod:@"locations.filter"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/locations/nearby" verb:@"GET"] forMethod:@"locations.nearby"];
     
-    // http://localhost:3000/ships/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
+    // http://localhost:3000/locations/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
     
     NSString *latitude = [[NSString alloc] initWithFormat:@"%g°", self.hqAnnotation.coordinate.latitude];
     NSString *longitude = [[NSString alloc] initWithFormat:@"%g°", self.hqAnnotation.coordinate.longitude];
     
-    //get Nearest with ships.nearby
+    //get Nearest with locations.nearby
     //[objectProto invokeStaticMethod:@"nearby" parameters:@{ @"here[lat]":latitude, @"here[lng]":longitude} success:loadSuccessBlock failure:loadErrorBlock];
     //get 1
     [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[limit]":@1} success:loadSuccessBlock failure:loadErrorBlock];
@@ -196,8 +189,8 @@
     
     // ++++++++++++++++++++++++++++++++++++
     
-    // Get 2 Ships
-    // http://localhost:3000/ships?filter%5Blimit%5D=2
+    // Get 2 locations
+    // http://localhost:3000/locations?filter%5Blimit%5D=2
     
     //
     // curl http://localhost:3000/location/nearby?here%5Blat%5D=37.587409&here%5Blng%5D=-122.338225
@@ -227,7 +220,7 @@
             
             MapAnnotation *annot = [[MapAnnotation alloc] initWithLocation:locCord];
             annot.title = [modelInstance objectForKeyedSubscript:@"name"];
-            annot.subtitle = [modelInstance objectForKeyedSubscript:@"SHIPTYPE"];
+            annot.subtitle = [modelInstance objectForKeyedSubscript:@"LOCATIONTYPE"];
             
             [self.mapAnnotations addObject:annot ];
             
@@ -243,10 +236,10 @@
         
     };//end selfSuccessBlock
     
-    //Get a local representation of the 'ships' model type
-    LBModelPrototype *objectProto = [ [AppDelegate adapter] prototypeWithName:prototypeName];
-    //[[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"ships.custommethod2"];
-    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/ships" verb:@"GET"] forMethod:@"ships.filter"];
+    //Get a local representation of the 'locations' model type
+    LBModelRepository *objectProto = [ [AppDelegate adapter] repositoryWithModelName:prototypeName];
+    //[[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/locations?filter%5Blimit%5D=2" verb:@"GET"] forMethod:@"locations.custommethod2"];
+    [[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/locations" verb:@"GET"] forMethod:@"locations.filter"];
     
     //get 2 
     [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[limit]":@2} success:loadSuccessBlock failure:loadErrorBlock];
@@ -255,7 +248,7 @@
     //[[[AppDelegate adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/location/nearby" verb:@"GET"] forMethod:@"locations.getNearestFew"];
 
     /*
-    // Ships with lowest inventory
+    // locations with lowest inventory
     // http://localhost:3000/products?filter[order]=inventory%20ASC&filter[limit]=1': The highest inventory products
     [objectProto invokeStaticMethod:@"filter" parameters:@{ @"filter[order]":@"inventory ASC",@"filter[limit]":@1} success:staticMethodSuccessBlock failure:staticMethodErrorBlock];
     
@@ -271,8 +264,8 @@
     
     
     
-    // Invoke the allWithSuccess message for the 'ships' LBModelPrototype
-    // Equivalent http JSON endpoint request : http://localhost:3000/ships
+    // Invoke the allWithSuccess message for the 'locations' LBModelPrototype
+    // Equivalent http JSON endpoint request : http://localhost:3000/locations
     //[objectProto allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
     //[objectB all:@"custommethod2" parameters:@{@"arg1":@"yack" , @"arg2":@123} success:staticMethodSuccessBlock failure:staticMethodErrorBlock ];
     
@@ -419,7 +412,7 @@
 
 - (IBAction)actionInject:(id)sender {
     
-    LBModelPrototype *ObjectPrototype = [ [AppDelegate adapter]  prototypeWithName:prototypeName];
+    LBModelRepository *ObjectPrototype = [ [AppDelegate adapter]  repositoryWithModelName:prototypeName];
     
     void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
         NSLog( @"initializeServerWithData: Error on Save %@", error.description);
@@ -433,17 +426,43 @@
        @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
        @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
                  [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
-       @"SHIPTYPE" : @"Cargo",
-       @"FLAG": @"US"
+       @"LOCATIONTYPE" : @"retail"
        }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
     
     [ [ObjectPrototype modelWithDictionary:@{
        @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
      @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
      [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
-       @"SHIPTYPE" : @"Cargo",
-       @"FLAG": @"US"
+       @"LOCATIONTYPE" : @"retail",
        }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+    
+    
+    [ [ObjectPrototype modelWithDictionary:@{
+                                             @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
+                                             @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
+                                                       [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
+                                             @"LOCATIONTYPE" : @"retail"
+                                             }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+
+    
+    [ [ObjectPrototype modelWithDictionary:@{
+                                             @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
+                                             @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
+                                                       [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
+                                             @"LOCATIONTYPE" : @"retail"
+                                             }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+
+    
+    [ [ObjectPrototype modelWithDictionary:@{
+                                             @"name": [[NSString alloc] initWithFormat:@"Location %@",[NSNumber numberWithInteger:(arc4random() % 33 + 1)] ] ,
+                                             @"geo" : [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithFloat:37.796996f + (arc4random()% 33 / 200.0f)] ,@"lat",
+                                                       [NSNumber numberWithFloat:-122.429281f + (arc4random()% 33 / 200.0f)],@"lng",nil],
+                                             @"LOCATIONTYPE" : @"retail"
+                                             }]  saveWithSuccess:saveNewSuccessBlock failure:saveNewErrorBlock];
+
+    
+    
+    
     
 }//end actionInject
 

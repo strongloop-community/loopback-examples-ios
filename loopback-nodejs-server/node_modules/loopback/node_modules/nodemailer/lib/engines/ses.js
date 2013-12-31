@@ -1,3 +1,5 @@
+"use strict";
+
 /*
  * This file is based on the original SES module for Nodemailer by dfellis
  * https://github.com/andris9/Nodemailer/blob/11fb3ef560b87e1c25e8bc15c2179df5647ea6f5/lib/engines/SES.js
@@ -103,7 +105,26 @@ SESTransport.prototype.handleMessage = function(email, callback) {
         request = http.request(reqObj, this.responseHandler.bind(this, callback));
     }
     request.end(params);
+
+    // Handle fatal errors
+    request.on("error", this.errorHandler.bind(this, callback) );
 };
+
+
+
+/**
+ * <p>Handles a fatal error response for the HTTP request to SES</p>
+ *
+ * @param {Function} callback Callback function to run on end (binded)
+ * @param {Object} response HTTP Response object
+ */
+SESTransport.prototype.errorHandler = function(callback, err) {
+    if( ! ( err instanceof Error) ) {
+        err = new Error('Email failed ' + ("statusCode" in err ? err.statusCode : null ), {response:err});
+    }
+    return typeof callback == "function" && callback(err, null);
+};
+
 
 /**
  * <p>Handles the response for the HTTP request to SES</p>
@@ -223,4 +244,3 @@ SESTransport.prototype.ISODateString = function(d){
 SESTransport.prototype.strPad = function(n){
     return n<10 ? '0'+n : n;
 };
-

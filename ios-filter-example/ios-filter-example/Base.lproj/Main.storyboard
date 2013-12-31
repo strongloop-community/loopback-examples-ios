@@ -25,14 +25,14 @@
                                 <color key="textColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-n4-CYs">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-n4-CYs">
                                 <rect key="frame" x="20" y="155" width="283" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="Hdc-uV-hag"/>
+                                    <constraint firstAttribute="width" constant="283" id="Hdc-uV-hag"/>
                                     <constraint firstAttribute="height" constant="44" id="v0g-AJ-dhg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="filter[order]=price ASC &amp; filter[limit]=3" backgroundImage="button.png">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="filter[order]=inventory ASC &amp; filter[limit]=3" backgroundImage="button.png">
                                     <color key="titleColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,13 +40,13 @@
                                     <action selector="actionGetModelsFilterAscendingOrderLimit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V20-ZC-E2a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDp-pj-eif">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDp-pj-eif">
                                 <rect key="frame" x="20" y="207" width="283" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="1N9-s5-yIn"/>
-                                    <constraint firstAttribute="width" constant="194" id="deU-mT-nEn"/>
+                                    <constraint firstAttribute="width" constant="283" id="deU-mT-nEn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="filter[order]=inventory DESC &amp; filter[limit]=3" backgroundImage="button.png">
                                     <color key="titleColor" red="0.058823533359999999" green="0.33725491169999999" blue="0.16862745579999999" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,10 +55,10 @@
                                     <action selector="actionGetModelsFilterDescendingOrderLimit:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fLP-Id-Dmm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hks-Oc-h66">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hks-Oc-h66">
                                 <rect key="frame" x="18" y="103" width="283" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="CEh-iU-9Xc"/>
+                                    <constraint firstAttribute="width" constant="283" id="CEh-iU-9Xc"/>
                                     <constraint firstAttribute="height" constant="44" id="alR-AX-yjH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -81,10 +81,10 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="dWI-mb-ViE"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-ak-f8Q">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-ak-f8Q">
                                 <rect key="frame" x="18" y="51" width="283" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="194" id="mTf-Hc-VSM"/>
+                                    <constraint firstAttribute="width" constant="283" id="mTf-Hc-VSM"/>
                                     <constraint firstAttribute="height" constant="44" id="vWN-jE-NNy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
