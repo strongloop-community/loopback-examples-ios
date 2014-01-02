@@ -117,7 +117,7 @@ app.use(loopback.errorHandler());
  * (remove this to handle `/` on your own)
  */
 
-app.get('/', loopback.status());
+//app.get('/', loopback.status());
 
 /*
  * 6. Enable access control and token based authentication.

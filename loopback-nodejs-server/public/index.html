@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+		
+    <title>Welcome to the StrongLoop Guide App</title>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="jumbotron-narrow.css" rel="stylesheet">
+  </head>
+	
+	<body>
+	
+	<div class="container-narrow">
+  	<div class="header">
+	 		<h3>StrongLoop iPhone Getting Started App</h3>
+   	</div>
+		
+		<div class="jumbotron">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3>StrongLoop</h3>
+					<h3>iPhone Getting Started App</h3>
+    			<!-- <p>Mobile App to show you how to connect your mobile app to LoopBack the open mobile backend built on node for building your own private mBaaS. </p> -->
+    			<p style="text-align:left;">①. Install the LoopBack Node.js Sample App</p></p>
+    			<p style="text-align:left;">②. Start your LoopBack App with $slc run app.js from within the node application folder</p>
+    			<p style="text-align:left;">③. Open iPhone XCode Project '/loopback-ios-app/loopback-ios-multi-model.xcodeproj'</p>
+    			<p style="text-align:left">④. Run app from XCode ( 	⌘ + R ) in the Simulator</p>
+ 				</div>
+				<div class="col-sm-5">
+					<img height="300" alt="" src="images/splashScreen.png">
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-6">
+					<a href="https://github.com/strongloop-community/loopback-mobile-getting-started" target="_blank" class="action-button" style="">Download the 'Getting Started' guide app </a>
+				</div>
+				<div class="col-sm-6	">
+					<a href="https://github.com/strongloop-community/loopback-ios-sdk" target="_blank" class="action-button" style="">Download the LoopBack iOS SDK .framework </a>
+				</div>
+			</div>
+   	</div>
+		
+		<div class="row">
+		  <div class="col-sm-4">
+		    <div class="thumbnail">
+		      <img style="float: right;" alt="" src="http://alpha.strongloop.com/wp-content/uploads/2013/07/sl_icon_loopback.jpg">
+		      <div class="caption">
+						<h2 class="sl_green_highlight">LoopBack</h2>
+						<h3>Private mBaaS</h3>
+						<p>An Enterprise-ready, open source mobile API framework built with the Node.js community, including mobile SDKs, supported by StrongLoop.</p>
+						<p><a class="link_more" target="_blank" href="http://alpha.strongloop.com/strongloop-suite/loopback">More &gt;</a></p>
+		   		</div>
+		  	</div>
+			</div>
+			
+		  <div class="col-sm-4">
+		    <div class="thumbnail">
+		      <img style="float: right;" alt="" src="http://alpha.strongloop.com/wp-content/uploads/2013/07/sl_icon_strongnode.jpg">
+		      <div class="caption">
+						<h2 class="sl_green_highlight">StrongNode</h2>
+						<h3>Certified Node</h3>
+						<p>Supported packaging of Node.js, containing certified and tested modules for developing, deploying, and maintaining Enterprise Node.js applications</p>
+						<p><a class="link_more" target="_blank" href="http://http://alpha.strongloop.com/strongloop-suite/strongnode/">More &gt;</a></p>
+		      </div>
+		    </div>
+		  </div>
+			
+			<div class="col-sm-4">
+	    	<div class="thumbnail">
+					<img style="float: right;" alt="" src="http://alpha.strongloop.com/wp-content/uploads/2013/07/sl_icon_strongops.jpg">
+	      <div class="caption">
+					<h2 class="sl_green_highlight">StrongOps</h2>
+					<h3>Operations Console</h3>
+					<p>Operational console specifically for StrongLoop Suite and Node.js Deep performance monitoring including CPU profiling and EventLoop stats.</p>
+					<p><a class="link_more" target="_blank" href="http://alpha.strongloop.com/strongloop-suite/strongops">More &gt;</a></p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	</br>
+	<div class="row api-explorer">
+		<div class="col-sm-2">
+			<a class="btn btn-small btn-success" href="explorer">API Explorer</a>
+		</div>
+		<div class="col-sm-2">
+			<a class="btn btn-small btn-success" href="/routes">Available Routes</a>
+		</div>
+	</div>
+	</br>
+	
+	<!--
+	REST APIs
+	<ul>
+	    <li><a href='/weapons'>Weapons</a></li>
+	    <li><a href='/weapons/2'>A weapon by id</a></li>
+	    <li><a href='/weapons?filter[limit]=2&filter[offset]=5'>Paginated Weapons</a></li>
+	    <li><a href='/weapons?filter[where][name]=M1911'>Weapons with name M1911</a></li>
+	    <li><a href='/weapons?filter[where][audibleRange][lt]=10'>Weapons with audioRange < 10</a></li>
+	    <li><a href='/weapons?filter[fields][name]=1&filter[fields][effectiveRange]=1'>Only name and effective ranges</a></li>
+	    <li><a href='/weapons?filter[where][effectiveRange][gt]=900&filter[limit]=3'>The top 3 weapons with a range over 900 meters</a></li>
+	    <li><a href='/weapons?filter[order]=audibleRange%20DESC&filter[limit]=3'>The loudest 3 weapons</a></li>
+
+	    <li><a href='/locations'>Locations</a></li>
+	    <li><a href='/locations/nearby?here[lat]=37.587409&here[lng]=-122.338225'>Locations nearby</a></li>
+	    <li><a href='/locations?filter[where][geo][near]=153.536,-28.1&filter[limit]=3'>The 3 closest locations to a given geo point</a></li>
+	</ul>
+	
+	<div class="row education">
+		<p><a href="http://localhost:3000/docs-loopback-clients/html/index.html" target="_blank"> Docs: LoopBack iOS SDK </a>
+			<p><a href="http://localhost:3000/docs-loopback-clients/html/index.html" target="_blank"> Docs: LoopBack Mobile API server </a>			
+				<p><a href="http://localhost:3000/models" target="_blank"> Current published models </a>
+	<p><a href="http://localhost:3000/routes" target="_blank"> Current published routes </a>
+<p><a href="../loopback-api/index.html" target="_blank"> Predefined API's </a>
+  </div>
+	 -->
+	
+	<div class="row mobile client connectors">
+		<div class="col-lg-6">
+    	<h4>iOS Native Objective-C</h4>
+      	<p>iOS Native SDK and Sample </p>	
+	  		<a href="http://github.com/strongloop-community/loopback-ios-multi-model" target="_blank"> github link</a> </p>
+	  		<a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-mobile-getting-started/archive/master.zip">Getting Started App</a>	
+	  		<a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-sdk/archive/master.zip">SDK</a>
+				
+       <h4>Titanium Cross Platform javascript</h4>
+       <p>Titanium CommonJS Module and Sample application</p>
+	  		<a href="http://github.com/strongloop-community/strongloop-titanium-appstore" target="_blank"> github link</a> </p>
+	  		<a class="btn btn-small btn-success" href="http://github.com/strongloop-community/strongloop-titanium-appstore/archive/master.zip">Sample App</a>	
+	  		<a class="btn btn-small btn-success" href="http://github.com/strongloop-community/strongloop-titanium-appstore/archive/master.zip">SDK</a>
+		</div>
+ 			<!--
+		<div class="col-lg-6">
+			<h4>Android Native Java</h4>
+	        	<p>Android Native SDK and Sample application</p>
+			  	<a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Sample App</a>	
+			  	<a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">SDK</a></p>
+		 		<a href="http://github.com/strongloop-community/strongloop-titanium-appstore" target="_blank"> github link</a>
+				-->
+		  
+          <h4>Xamarin Cross Platform Mobile C#</h4>
+          <p>Xamarin SDK and Sample </p>	
+		  <p><a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Sample App</a>	
+		  <a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">SDK</a></p>
+		  <p><a href="http://github.com/strongloop-community/strongloop-titanium-appstore" target="_blank"> github link</a> 
+		
+				<!-- 
+					
+          <h4>Phone Gap Cross Platform Mobile</h4>
+          <p>Phone Gap SDK and Sample </p>	
+		  <p><a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Sample App</a>	
+		  <a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">SDK</a></p>
+		  <p><a href="http://github.com/strongloop-community/strongloop-titanium-appstore" target="_blank"> github link</a> 
+			
+		  <h4>Trigger.io</h4>
+          <p>Trigger.io SDK and Sample </p>	
+		  <p><a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Sample App</a>	
+		  <a class="btn btn-small btn-success" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">SDK</a></p>
+		  <p><a href="http://github.com/strongloop-community/strongloop-titanium-appstore" target="_blank"> github link</a> 
+		-->
+		
+        </div>
+      </div>
+
+	<!-- 
+<div class="row education">
+    <div class="col-lg-6">
+      <h4>Debugging</h4>
+      <p>Debugging your Node.js backend with node-inspector and StrongLoop</p>	
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a></p>
+	  
+      <h4>Deploying</h4>
+      <p>Deploying on Amazon EC2 using the StrongLoop ami</p>
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a>	</p>
+	  
+      <h4>Dev Ops </h4>
+      <p>Application Performance Management console Strong-Ops</p>
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a>	</p>
+	  
+    </div>
+
+    <div class="col-lg-6">
+	  
+      <h4> Using NPM's</h4>
+      <p> asfd asdfas asfd asdfasd  fsadg asfd asdfasd  fsadg asdgs </p>	
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a></p>
+		
+      <h4>Using NPM's</h4>
+      <p> asfd asdfasd  fsadg  bbdsfas sadf asdfsd sadfsadf asdfsd bbb </p>	
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a></p>
+		
+	  <h4>Integrating with Oracle</h4>
+      <p>Using Loopback to get access to enterprise Oracle DB data </p>
+	  <p><a class="btn btn-small btn-primary" href="https://github.com/strongloop-community/loopback-ios-multi-model/archive/master.zip">Guide</a></p>
+
+    </div>
+  </div>
+	-->
+	
+  <div>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+		<p> </p>
+	</div>
+	<div class="footer">
+			<p><a href="http:www.strongloop.com" target="_blank"> StrongLoop</a> 
+   		<p>&copy; Company 2013</p>
+ 	</div>
+	
+  </body>
+</html>
