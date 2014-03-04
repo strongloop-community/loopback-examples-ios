@@ -3,21 +3,6 @@ var path = require('path');
 var app = module.exports = loopback();
 var started = new Date();
 
-// operational dependencies
-try {
-  require('strong-agent').profile();
-  var control = require('strong-cluster-control');
-  var clusterOptions = control.loadOptions();
-} catch(e) {
-  console.log('Could not load operational dependencies:');
-  console.log(e);
-}
-
-// if configured as a cluster master, just start controller
-if(clusterOptions.clustered && clusterOptions.isMaster) {
-  return control.start(clusterOptions);
-}
-
 /*
  * 1. Configure LoopBack models and datasources
  *
@@ -34,7 +19,8 @@ app.boot(__dirname);
 
 app.use(loopback.favicon());
 app.use(loopback.logger(app.get('env') === 'development' ? 'dev' : 'default'));
-app.use(loopback.cookieParser({secret: app.get('cookieSecret')}));
+app.use(loopback.cookieParser(app.get('cookieSecret')));
+app.use(loopback.token({model: app.models.accessToken}));
 app.use(loopback.bodyParser());
 app.use(loopback.methodOverride());
 
@@ -50,18 +36,19 @@ app.use(loopback.methodOverride());
  */
 
 // LoopBack REST interface
-var apiPath = '/api';
-app.use(apiPath, loopback.rest());
+app.use(app.get('restApiRoot'), loopback.rest());
 
 // API explorer (if present)
-var explorerPath = '/explorer';
-var explorerConfigured = false;
 try {
-  var explorer = require('loopback-explorer');
-  app.use(explorerPath, explorer(app, { basePath: apiPath }));
-  explorerConfigured = true;
+  var explorer = require('loopback-explorer')(app);
+  app.use('/explorer', explorer);
+  app.once('started', function(baseUrl) {
+    console.log('Browse your REST API at %s%s', baseUrl, explorer.route);
+  });
 } catch(e){
-  // ignore errors, explorer stays disabled
+  console.log(
+    'Run `npm install loopback-explorer` to enable the LoopBack explorer'
+  );
 }
 
 /*
@@ -117,7 +104,7 @@ app.use(loopback.errorHandler());
  * (remove this to handle `/` on your own)
  */
 
-//app.get('/', loopback.status());
+app.get('/', loopback.status());
 
 /*
  * 6. Enable access control and token based authentication.
@@ -134,18 +121,14 @@ app.enableAuth();
  * (only if this module is the main module)
  */
 
+app.start = function() {
+  return app.listen(function() {
+    var baseUrl = 'http://' + app.get('host') + ':' + app.get('port');
+    app.emit('started', baseUrl);
+    console.log('LoopBack server listening @ %s%s', baseUrl, '/');
+  });
+};
+
 if(require.main === module) {
-  require('http').createServer(app).listen(app.get('port'), app.get('host'),
-    function(){
-      var baseUrl = 'http://' + app.get('host') + ':' + app.get('port');
-      if (explorerConfigured) {
-        console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
-      } else {
-        console.log(
-          'Run `npm install loopback-explorer` to enable the LoopBack explorer'
-        );
-      }
-      console.log('LoopBack server listening @ %s%s', baseUrl, '/');
-    }
-  );
+  app.start();
 }

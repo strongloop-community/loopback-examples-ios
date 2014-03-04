@@ -10,18 +10,6 @@
 
 @implementation AppDelegate
 
-// The LBRESTAdapter defines the API server location endpoint for LoopBack server Calls
-// file://localhost/loopback-clients/ios/docs/html/interface_l_b_r_e_s_t_adapter.html
-
-static LBRESTAdapter * _adapter = nil;
-
-+ (LBRESTAdapter *) adapter
-{
-    if( !_adapter)
-        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000/api/"]];
-    return _adapter;
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.

@@ -1,20 +1,18 @@
 
 echo load products data 
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product A", "inventory": 11, "price" :66.34, "UPC": "127890"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product B", "inventory": 22, "price" :22.34, "UPC": "127891"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product C", "inventory": 33, "price" :11.54, "UPC": "127892"}' http://localhost:3000/products;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Product D", "inventory": 44, "price" :9.24, "UPC": "123893"}' http://localhost:3000/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product A", "inventory": 11, "price" :66.34, "UPC": "127890"}' http://localhost:3000/api/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product B", "inventory": 22, "price" :22.34, "UPC": "127891"}' http://localhost:3000/api/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product C", "inventory": 33, "price" :11.54, "UPC": "127892"}' http://localhost:3000/api/products;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Product D", "inventory": 44, "price" :9.24, "UPC": "123893"}' http://localhost:3000/api/products;
 
 echo load locations data
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc A","geo": { "lat": 37.796996, "lng": -122.429281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/locations;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc B","geo": { "lat": 37.766996, "lng": -122.409281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/locations;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc C","geo": { "lat": 37.8000, "lng": -122.449281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/locations;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc A","geo": { "lat": 37.796996, "lng": -122.429281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/api/locations;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc B","geo": { "lat": 37.766996, "lng": -122.409281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/api/locations;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Loc C","geo": { "lat": 37.8000, "lng": -122.449281 } ,"LOCATIONTYPE": "retail" }' http://localhost:3000/api/locations;
 
 echo load customer data
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Customer A", "zip": "127891"}' http://localhost:3000/customers;
-curl -X POST -H "Content-Type:application/json" -d '{"name": "Customer B", "zip": "127892"}' http://localhost:3000/customers;
-
-
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Customer A", "zip": "127891"}' http://localhost:3000/api/customers;
+curl -X POST -H "Content-Type:application/json" -d '{"name": "Customer B", "zip": "127892"}' http://localhost:3000/api/customers;
 
 
 #echo car data

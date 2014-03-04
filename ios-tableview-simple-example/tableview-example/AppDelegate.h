@@ -11,5 +11,4 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-+ (LBRESTAdapter *) adapter;
 @end

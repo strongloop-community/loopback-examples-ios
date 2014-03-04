@@ -14,9 +14,17 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) LBRESTAdapter * adapter;
 @end
 
 @implementation ViewController
+
+- (LBRESTAdapter *) adapter
+{
+    if( !_adapter)
+        _adapter = [LBRESTAdapter adapterWithURL:[NSURL URLWithString:@"http://localhost:3000/api/"]];
+    return _adapter;
+}
 
 - (NSArray *) tableData
 {
@@ -44,10 +52,10 @@
     };//end selfSuccessBlock
     
     //Get a local representation of the model type
-    LBModelRepository *objectB = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
+    LBModelRepository *objectB = [[self adapter] repositoryWithModelName:prototypeName];
     
     // Invoke the allWithSuccess message for the LBModelRepository
-    // Equivalent http JSON endpoint request : http://localhost:3000/products
+    // Equivalent http JSON endpoint request : http://localhost:3000/api/products
     
     [objectB allWithSuccess: loadSuccessBlock failure: loadErrorBlock];
 };
@@ -61,7 +69,7 @@
     
     ///*
     //Get a local representation of the model type
-    LBModelRepository *prototype = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
+    LBModelRepository *prototype = [[self adapter] repositoryWithModelName:prototypeName];
     
     //create new LBModel of type
     LBModel *model = [prototype modelWithDictionary:@{ @"name": @"New Product", @"inventory" : @99 }];
@@ -111,7 +119,7 @@
     };
     
     //Get a local representation of the model type
-    LBModelRepository *prototype = [[AppDelegate adapter] repositoryWithModelName:prototypeName];
+    LBModelRepository *prototype = [[self adapter] repositoryWithModelName:prototypeName];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/api/products/2
@@ -149,7 +157,7 @@
     };
     
     //Get a local representation of the model type
-    LBModelRepository *prototype = [ [AppDelegate adapter] repositoryWithModelName:prototypeName];
+    LBModelRepository *prototype = [ [self adapter] repositoryWithModelName:prototypeName];
     
     //Get the instance of the model with ID = 2
     // Equivalent http JSON endpoint request : http://localhost:3000/products/2
@@ -181,7 +189,7 @@
 }
 
 - (IBAction)actionInjectData:(id)sender {
-    LBModelRepository *ObjectPrototype = [ [AppDelegate adapter]  repositoryWithModelName:prototypeName];
+    LBModelRepository *ObjectPrototype = [ [self adapter]  repositoryWithModelName:prototypeName];
     
     void (^saveNewErrorBlock)(NSError *) = ^(NSError *error) {
         NSLog( @"initializeServerWithData: Error on Save %@", error.description);

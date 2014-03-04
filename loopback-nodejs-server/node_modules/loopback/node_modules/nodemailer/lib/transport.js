@@ -4,7 +4,8 @@ var SendmailTransport = require("./engines/sendmail"),
     SMTPTransport = require("./engines/smtp"),
     SESTransport = require("./engines/ses"),
     StubTransport = require("./engines/stub"),
-    DirectTransport = require("./engines/direct");
+    DirectTransport = require("./engines/direct"),
+    PickupTransport = require("./engines/pickup");
 
 
 // Expose to the world
@@ -18,7 +19,8 @@ Transport.transports = {
     "SES": SESTransport,
     "SENDMAIL": SendmailTransport,
     "STUB": StubTransport,
-    "DIRECT": DirectTransport
+    "DIRECT": DirectTransport,
+    "PICKUP": PickupTransport
 };
 
 /**
@@ -28,21 +30,28 @@ Transport.transports = {
  * and if needed, also an <code>close</code> method</p>
  *
  * @constructor
- * @param {String} type The type of the transport, currently available: SMTP, SES and Sendmail
+ * @param {String|Function} type The type of the transport, currently available: SMTP, SES and Sendmail
  */
 function Transport(type, options){
+    var Constructor;
 
-    this.options = options;
+    this.options = options || {};
 
-    this.transportType = (type || "direct").toString().trim().toUpperCase();
-    this.dkimOptions = false;
+    if(typeof type == "function"){
+        this.transportType = (type.name || "CUSTOM").toString().toUpperCase().trim();
+        Constructor = type;
+    }else{
+        this.transportType = (type || "direct").toString().trim().toUpperCase();
+        this.dkimOptions = false;
 
-    if(!(this.transportType in Transport.transports) && this.transportType.toLowerCase() in SMTPTransport.wellKnownHosts){
-        this.options.service = this.transportType;
-        this.transportType  = SMTPTransport.wellKnownHosts[this.transportType.toLowerCase()].transport;
+        if(!(this.transportType in Transport.transports) && this.transportType.toLowerCase() in SMTPTransport.wellKnownHosts){
+            this.options.service = this.transportType;
+            this.transportType  = SMTPTransport.wellKnownHosts[this.transportType.toLowerCase()].transport;
+        }
+
+        Constructor = Transport.transports[this.transportType];
     }
 
-    var Constructor = Transport.transports[this.transportType];
     if(Constructor){
         this.transport = new Constructor(this.options);
         this.version = this.transport.version || false;

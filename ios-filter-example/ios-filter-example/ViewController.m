@@ -89,7 +89,7 @@
     [[ [self adapter] contract] addItem:[SLRESTContractItem itemWithPattern:@"/products" verb:@"GET"] forMethod:@"products.filter"];
     
     //Product with lowest inventory
-    // http://localhost:3000/products?filter[order]=inventory%20ASC&filter[limit]=3': The highest inventory products
+    // http://localhost:3000/api/products?filter[order]=inventory%20ASC&filter[limit]=3': The highest inventory products
     [prototype invokeStaticMethod:@"filter" parameters:@{ @"filter[order]":@"inventory ASC",@"filter[limit]":@3} success:staticMethodSuccessBlock failure:staticMethodErrorBlock];
     
 }
